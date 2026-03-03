@@ -1,6 +1,6 @@
-# **FAIRification Report: BE1 Dataset (GSE243665)**
+# **FAIRification of the Single Cell Omics Benchmark Datasets **
 
-## **ELIXIR Single Cell Omics Community Implementation Study**
+## ** ELIXIR Single Cell Omics Benchmark Dataset 1 (GSE243665) **
 
 ### **Executive Summary**
 

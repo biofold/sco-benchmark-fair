@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELIXIR Single Cell Omics BE1 Benchmark FAIRification</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #4689a3;
+            --accent-color: #e74c3c;
+            --light-bg: #f8f9fa;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light-bg);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header - Matching fair_dashboard.html */
+        header {
+            background: linear-gradient(135deg, var(--primary-color),#4689a3);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 40px;
+            border-radius: 12px;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        h4 {
+            color: #555;
+            margin: 5px 0 5px;
+            font-size: 1.1rem;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .badge:hover {
+            transform: translateY(-2px);
+        }
+
+        .badge.fair {
+            background: linear-gradient(135deg, var(--success-color), #219653);
+            color: white;
+            box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
+        }
+
+        .badge.license {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        .badge.doi {
+            background-color: #4285f4;
+            color: white;
+        }
+
+        .badge.python {
+            background-color: #3776ab;
+            color: white;
+        }
+
+        .badge.schema {
+            background-color: #6f42c1;
+            color: white;
+        }
+
+        .badge.croissant {
+            background-color: #ff9800;
+            color: white;
+        }
+
+        .dashboard-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(255,255,255,0.15);
+            color: white;
+            padding: 6px 6px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin: 10px 5px;
+            border: 2px solid rgba(255,255,255,0.3);
+            margin-top: 25px;
+        }
+
+        .dashboard-link:hover {
+            background-color: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Section Cards */
+        .section {
+            background-color: white;
+            margin: 30px 0;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            margin: 20px 0 10px;
+            font-size: 1.3rem;
+        }
+
+        /* Project Cards */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eaeaea;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--secondary-color), #386277);
+            color: white !important;
+            padding: 20px;
+        }
+
+        .card-header h3 {
+            color: white;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-footer {
+            background-color: #f8f9fa;
+            padding: 15px 20px;
+            border-top: 1px solid #eaeaea;
+        }
+
+        /* Feature Highlights */
+        .feature-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .model-card {
+            flex: 1;
+            min-width: 250px;
+            background: #e8e8e8;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-right: 5px solid;
+            transition: transform 0.3s ease;
+        }
+
+        .model-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .model-card.nn {
+            border-right-color: #e74c3c;
+        }
+
+        .model-card.rf {
+            border-right-color: var(--secondary-color);
+        }
+
+        .model-card.svm {
+            border-right-color: var(--success-color);
+        }
+
+        .model-card.lr {
+            border-right-color: var(--warning-color);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .key-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+            margin: 40px 0;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, var(--primary-color), #4689a3);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Workflow Visualization */
+        .workflow {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .workflow-step {
+            background: #e8e8e8;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1;
+            min-width: 180px;
+            max-width: 220px;
+        }
+
+        .step-number {
+            background: var(--secondary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #386277;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 60px;
+            border-radius: 12px;
+        }
+
+        .footer-content {
+            margin-top: 15px;
+            padding: 0 10px;
+        }
+
+        .footer-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .copyright {
+            margin: 10px;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Model Comparison */
+        .model-comparison {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .model-item {
+            flex: 1;
+            min-width: 250px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-right: 5px solid var(--secondary-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .dashboard-link {
+                width: 100%;
+                justify-content: center;
+                margin: 5px 0;
+            }
+
+            .workflow {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .workflow-step {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        pre {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-top: 10px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .card-header h3 {
+            color: white;
+            margin: 0;
+        }
+
+        .card-header i {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                <h1>ELIXIR Single Cell Omics BE1 Benchmark FAIRification</h1>
+                <h4 style="color:white;"><strong>
+                    Transforming BE1 single-cell RNAseq benchmark dataset into FAIR-compliant, controlled cancer heterogeneity resource
+                </strong></h4>
+                <div class="badges">
+                    <span class="badge fair"><i class="fas fa-check-circle"></i> FAIR Score: 92/100</span>
+                    <span class="badge license"><i class="fas fa-scale-balanced"></i> CC BY 4.0</span>
+                    <span class="badge doi"><i class="fas fa-fingerprint"></i> DOI: 10.1038/s41597-024-03002-8</span>
+                    <span class="badge schema"><i class="fas fa-sitemap"></i> Single Cell Schema v0.4</span>
+                    <span class="badge croissant"><i class="fas fa-braille"></i> ML-Ready</span>
+                </div>
+                <div class="header-content">
+                   <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE243665" class="dashboard-link" target="_blank">
+                      <i class="fas fa-database"></i> GEO Dataset GSE243665
+                   </a>
+                   <a href="https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA1019356" class="dashboard-link" target="_blank">
+                       <i class="fas fa-dna"></i> SRA: PRJNA1019356
+                   </a>
+                   <a href="https://doi.org/10.6084/m9.figshare.23939481.v1" class="dashboard-link" target="_blank">
+                     <i class="fa-solid fa-file-archive"></i> figshare Matrices
+                   </a>
+                    <a href="http://aisc.hpc4ai.unito.it:3838/" class="dashboard-link" target="_blank">
+                        <i class="fas fa-chart-line"></i> Shiny Mixing App
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Project Overview -->
+            <section class="section">
+                <h2><i class="fa-solid fa-rocket"></i> Project Overview</h2>
+                <p>This project implements comprehensive FAIRification of the <strong>BE1 benchmark dataset</strong> from the ELIXIR Single Cell Omics Implementation Study (WP3), transforming the original 10XGenomics scRNA-seq experiment into a FAIR-compliant, machine learning-ready resource with controlled cancer heterogeneity using seven lung cancer cell lines with distinct driver mutations.</p>
+
+                <div class="key-metrics">
+                    <div class="metric-card">
+                        <div class="metric-value">29,528</div>
+                        <div class="metric-label">Total Cells Sequenced</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">7</div>
+                        <div class="metric-label">Cancer Cell Lines</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">8</div>
+                        <div class="metric-label">Samples (+PBMC)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">92%</div>
+                        <div class="metric-label">FAIR Score</div>
+                    </div>
+                </div>
+
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="card-header">
+                            <h3><i class="fa-solid fa-dna"></i> Controlled Heterogeneity</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Seven lung cancer cell lines with distinct driver mutations: EGFR Del19, KRAS G12S, MET Del14, BRAF G469A, ERBB2 V842I, ROS1 fusion, ALK fusion, plus PBMC control.</p>
+                            <ul style="margin-top: 10px; padding-left: 20px;">
+                                <li>PC9: EGFR Del19 (4,492 cells)</li>
+                                <li>A549: KRAS G12S (6,898 cells)</li>
+                                <li>NCI-H596: MET Del14 (2,965 cells)</li>
+                                <li>NCI-H1395: BRAF G469A (2,673 cells)</li>
+                                <li>DV90: ERBB2 V842I (2,998 cells)</li>
+                                <li>HCC78: ROS1 fusion (2,748 cells)</li>
+                                <li>CCL.185-IG: ALK fusion (6,354 cells)</li>
+                                <li>PBMC: healthy donor control</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#cell-lines" class="dashboard-link" style="color: black;padding: 8px 16px; font-size: 0.9rem; margin: 0;">
+                                View Cell Line Details
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-header">
+                            <h3><i class="fa-solid fa-sitemap"></i> Single Cell Schema v0.4</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Complete FAIRification using Darwin Core extension for single-cell RNA-seq with 16 standardized metadata sheets covering all experimental aspects.</p>
+                            <ul style="margin-top: 10px; padding-left: 20px;">
+                                <li>Study, person, sample metadata</li>
+                                <li>Dissociation, cell suspension protocols</li>
+                                <li>Library prep & sequencing parameters</li>
+                                <li>Raw & downstream processing</li>
+                                <li>Expression data files & settings</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#schema" class="dashboard-link" style="color: black;padding: 8px 16px; font-size: 0.9rem; margin: 0;">
+                                View Schema Details
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-header">
+                            <h3><i class="fa-solid fa-brain"></i> ML-Ready Benchmark</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Designed for developing and validating computational methods for cancer heterogeneity analysis with controlled ground truth.</p>
+                            <ul style="margin-top: 10px; padding-left: 20px;">
+                                <li>R Shiny App for controlled mixtures</li>
+                                <li>BE1-500 validation dataset</li>
+                                <li>CCLE bulk transcriptome comparison</li>
+                                <li>Cell Ranger v7.1.0 processed</li>
+                                <li>intron-mode quantification</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="http://aisc.hpc4ai.unito.it:3838/" class="dashboard-link" style="color: black;padding: 8px 16px; font-size: 0.9rem; margin: 0;" target="_blank">
+                                Launch Shiny App
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAIR Assessment -->
+            <section class="section">
+                <h2><i class="fa-solid fa-bullseye"></i> FAIR Assessment</h2>
+                <p>Comprehensive FAIR evaluation of the BE1 dataset after transformation:</p>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-number">95</div>
+                        <div><strong>Findable</strong></div>
+                        <div style="font-size: 0.9rem; margin-top: 8px;">Persistent IDs: GEO, DOI, SRA, BioProject, figshare</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">90</div>
+                        <div><strong>Accessible</strong></div>
+                        <div style="font-size: 0.9rem; margin-top: 8px;">FTP, SRA Run Selector, CC BY 4.0 licence</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">94</div>
+                        <div><strong>Interoperable</strong></div>
+                        <div style="font-size: 0.9rem; margin-top: 8px;">Single Cell Schema, controlled vocabularies, MTX/HDF5 formats</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">88</div>
+                        <div><strong>Reusable</strong></div>
+                        <div style="font-size: 0.9rem; margin-top: 8px;">Full provenance, QC metrics, validation against CCLE</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Integrated Workflow -->
+            <section class="section" id="workflow">
+                <h2><i class="fa-solid fa-sitemap"></i> FAIRification Workflow</h2>
+                <p>Systematic transformation of the BE1 dataset following Single Cell Schema standards:</p>
+
+                <div class="workflow">
+                    <div class="workflow-step">
+                        <div class="step-number">1</div>
+                        <h4>Data Collection</h4>
+                        <p>7 lung cancer cell lines + PBMC, 29,528 cells sequenced on 10X Genomics</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">2</div>
+                        <h4>Schema Mapping</h4>
+                        <p>Single Cell Schema v0.4 with 16 metadata sheets</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">3</div>
+                        <h4>Identifier Enrichment</h4>
+                        <p>GEO, SRA, figshare DOIs, PMID, BioProject</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">4</div>
+                        <h4>QC Validation</h4>
+                        <p>rCASC mito/ribo filtering, CCLE comparison, BE1-500 clustering</p>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">5</div>
+                        <h4>ML Enablement</h4>
+                        <p>R Shiny mixing app, feature extraction, benchmark datasets</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cell Line Statistics -->
+            <section class="section" id="cell-lines">
+                <h2><i class="fa-solid fa-table"></i> Per-Cell Line Statistics</h2>
+                <p>Cell Ranger v7.1.0 statistics for each cell line (from publication):</p>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cell Line</th>
+                                <th>Driver Mutation</th>
+                                <th>Cells</th>
+                                <th>Mean Reads/Cell</th>
+                                <th>Median Genes</th>
+                                <th>Sequencing Saturation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>PC9</td><td>EGFR Del19</td><td>4,492</td><td>28,984</td><td>2,868</td><td>47.8%</td></tr>
+                            <tr><td>A549</td><td>KRAS G12S</td><td>6,898</td><td>29,864</td><td>3,307</td><td>60.1%</td></tr>
+                            <tr><td>CCL-185-IG</td><td>EML4-ALK fusion</td><td>6,354</td><td>29,859</td><td>2,810</td><td>60.6%</td></tr>
+                            <tr><td>NCI-H1395</td><td>BRAF G469A</td><td>2,673</td><td>27,972</td><td>2,822</td><td>48.0%</td></tr>
+                            <tr><td>DV90</td><td>ERBB2 V842I</td><td>2,998</td><td>26,756</td><td>2,387</td><td>41.4%</td></tr>
+                            <tr><td>HCC78</td><td>ROS1 fusion</td><td>2,748</td><td>24,700</td><td>2,570</td><td>38.7%</td></tr>
+                            <tr><td>NCI-H596</td><td>MET Del14</td><td>2,965</td><td>28,666</td><td>3,113</td><td>56.7%</td></tr>
+                            <tr><td>PBMC</td><td>Healthy control</td><td>~500</td><td>-</td><td>-</td><td>-</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="small-note" style="margin-top: 10px;">Total sequenced: 2.46 billion reads, ≥71.26% bases ≥Q30 on NovaSeq X Plus</p>
+            </section>
+
+            <!-- Key Features -->
+            <section class="section">
+                <h2><i class="fa-solid fa-star"></i> Key Features & Innovations</h2>
+
+                <div class="feature-highlights">
+                    <div class="model-card nn">
+                        <h4><i class="fa-solid fa-code-merge"></i> Single Cell Schema v0.4</h4>
+                        <p>Complete Darwin Core extension implementation with 16 standardized metadata sheets covering all experimental aspects from dissociation to expression data.</p>
+                    </div>
+                    <div class="model-card rf">
+                        <h4><i class="fa-solid fa-dna"></i> Controlled Heterogeneity</h4>
+                        <p>Seven distinct driver mutations with partially overlapping pathways: EGFR, ALK, MET, ERBB2, KRAS, BRAF, ROS1 - ideal for benchmarking.</p>
+                    </div>
+                    <div class="model-card svm">
+                        <h4><i class="fa-solid fa-chart-line"></i> R Shiny Mixing App</h4>
+                        <p>Interactive tool to generate controlled mixtures of cell lines at user-defined ratios for creating custom benchmark datasets.</p>
+                    </div>
+                    <div class="model-card lr">
+                        <h4><i class="fa-solid fa-check-circle"></i> Comprehensive Validation</h4>
+                        <p>BE1-500 clustering validation, CCLE bulk transcriptome comparison, external dataset integration (Tian et al., Aissa et al.)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Validation Summary -->
+            <section class="section">
+                <h2><i class="fa-solid fa-clipboard-check"></i> Validation Results</h2>
+
+                <div class="model-comparison">
+                    <div class="model-item">
+                        <h4><i class="fas fa-vial"></i> BE1-500 Clustering</h4>
+                        <p><strong>Louvain resolution 0.1:</strong> 6 clusters</p>
+                        <p><strong>Cluster composition:</strong> Each cluster predominantly from specific cell line</p>
+                        <p><strong>Note:</strong> A549 and CCL-185-IG co-cluster (syngeneic)</p>
+                    </div>
+                    <div class="model-item">
+                        <h4><i class="fas fa-database"></i> CCLE Comparison</h4>
+                        <p><strong>Method:</strong> Hierarchical clustering of pseudo-bulks</p>
+                        <p><strong>Result:</strong> Strong alignment between single-cell pseudo-bulks and CCLE bulk transcriptomes</p>
+                    </div>
+                    <div class="model-item">
+                        <h4><i class="fas fa-filter"></i> QC Filtering</h4>
+                        <p><strong>Tool:</strong> rCASC mitoRiboUmi plot</p>
+                        <p><strong>NCI-H1395:</strong> Reduced from 2,673 to 1,939 cells after QC</p>
+                        <p><strong>Thresholds:</strong> mito &lt;20%, genes &gt;200, UMI &gt;500</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Data Access -->
+            <section class="section">
+                <h2><i class="fa-solid fa-download"></i> Data Access & Resources</h2>
+
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="card-body">
+                            <h4><i class="fa-solid fa-database"></i> Primary Data</h4>
+                            <ul style="margin-top: 10px; padding-left: 20px;">
+                                <li><strong>GEO:</strong> <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE243665" target="_blank">GSE243665</a> (count matrices)</li>
+                                <li><strong>SRA:</strong> <a href="https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA1019356" target="_blank">PRJNA1019356</a> (FASTQ)</li>
+                                <li><strong>BioProject:</strong> PRJNA1019356</li>
+                                <li><strong>figshare:</strong> <a href="https://doi.org/10.6084/m9.figshare.23939481.v1" target="_blank">10.6084/m9.figshare.23939481.v1</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-body">
+                            <h4><i class="fa-solid fa-gear"></i> Supplementary Data</h4>
+                            <ul style="margin-top: 10px; padding-left: 20px;">
+                                <li><strong>CCLE data:</strong> <a href="https://doi.org/10.6084/m9.figshare.23284748.v1" target="_blank">10.6084/m9.figshare.23284748.v1</a></li>
+                                <li><strong>Driver gene targets:</strong> IPA & TRRUST relations</li>
+                                <li><strong>Code & docs:</strong> <a href="https://doi.org/10.6084/m9.figshare.24744996.v1" target="_blank">10.6084/m9.figshare.24744996.v1</a></li>
+                                <li><strong>multi_gex.csv:</strong> Cell Ranger config in GEO</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-body">
+                            <h4><i class="fa-solid fa-tools"></i> Tools</h4>
+                            <ul style="margin-top: 10px; padding-left: 20px;">
+                                <li><strong>Shiny App:</strong> <a href="http://aisc.hpc4ai.unito.it:3838/" target="_blank">http://aisc.hpc4ai.unito.it:3838/</a></li>
+                                <li><strong>Docker:</strong> repbioinfo/cellranger.2023.7.1.0</li>
+                                <li><strong>Cell Ranger:</strong> v7.1.0 (intron mode)</li>
+                                <li><strong>Reference:</strong> GRCh38-2020-A</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Start -->
+            <section class="section">
+                <h2><i class="fa-solid fa-play-circle"></i> Quick Start Guide</h2>
+
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="card-body">
+                            <h4><i class="fa-solid fa-database"></i> 1. Download Data</h4>
+                            <pre>
+# GEO count matrices (MTX format)
+wget -r ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE243nnn/GSE243665/suppl/
+
+# Or via figshare
+wget https://figshare.com/ndownloader/files/43908748 -O BE1_matrices.zip</pre>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-body">
+                            <h4><i class="fa-solid fa-dna"></i> 2. Reproduce Cell Ranger</h4>
+                            <pre>
+docker run -v /data:/data \
+  repbioinfo/cellranger.2023.7.1.0 \
+  cellranger multi --id=BE1run1 \
+  --csv=/data/multi_gex.csv</pre>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-body">
+                            <h4><i class="fa-solid fa-chart-line"></i> 3. Generate Controlled Mixtures</h4>
+                            <pre>
+# Access Shiny App
+http://aisc.hpc4ai.unito.it:3838/
+
+# Select cell lines and ratios
+# Download custom sparse matrix
+# Cell barcodes contain cell line names</pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <i class="fas fa-flask"></i> ELIXIR Single Cell Omics Implementation Study · WP3 · Controlled Heterogeneity Benchmark BE1
+                </div>
+
+                <div class="footer-badges">
+                    <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE243665">
+                        <img src="https://img.shields.io/badge/GEO-GSE243665-blue" alt="GEO: GSE243665">
+                    </a>
+                    <a href="https://creativecommons.org/licenses/by/4.0/">
+                        <img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="License: CC BY 4.0">
+                    </a>
+                    <a href="https://doi.org/10.1038/s41597-024-03002-8">
+                        <img src="https://img.shields.io/badge/DOI-10.1038%2Fs41597--024--03002--8-blue" alt="DOI">
+                    </a>
+                    <a href="https://singlecellschemas.org/">
+                        <img src="https://img.shields.io/badge/Schema-Single%20Cell%20v0.4-purple" alt="Schema v0.4">
+                    </a>
+                    <a href="http://aisc.hpc4ai.unito.it:3838/">
+                        <img src="https://img.shields.io/badge/Shiny-App-orange" alt="Shiny App">
+                    </a>
+                </div>
+
+                <div class="copyright">
+                    <p>BE1 Benchmark FAIRification Project • Generated on: 2026-03-03<br>
+                    Publication: Arigoni M et al. Sci Data 2024;11(1):159. PMID: 38307867</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

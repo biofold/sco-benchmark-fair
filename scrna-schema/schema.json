@@ -1,0 +1,341 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://singlecellschemas.org/schemas/dwc_sc_rnaseq_v0.4.json",
+  "title": "Single-cell RNA-seq Metadata Schema [Darwin Core]",
+  "description": "Schema for single-cell Ribonucleic Acid Sequencing (RNA-seq) studies focused on biodiversity-related information in alignment with the Darwin Core (DwC) standard. Version 0.4.",
+  "version": "0.4",
+  "type": "object",
+  "required": ["manifest", "study", "person", "sample", "dissociation", "cell_suspension", "lib_prep", "sequencing", "file"],
+  "additionalProperties": true,
+  
+  "properties": {
+    "manifest": {
+      "type": "object",
+      "description": "Manifest information about the schema itself.",
+      "properties": {
+        "key": {"type": "string", "enum": ["version_dwc_sc_rnaseq"]},
+        "name": {"type": "string", "enum": ["Single-cell Ribonucleic Acid Sequencing [Darwin Core]"]},
+        "description": {"type": "string"},
+        "standard": {"type": "string", "enum": ["dwc"]},
+        "technology": {"type": "string", "enum": ["sc_rnaseq"]},
+        "manifest_version": {"type": "string", "enum": ["0.4"]}
+      },
+      "required": ["key", "name", "description", "standard", "technology", "manifest_version"]
+    },
+    
+    "study": {
+      "type": "array",
+      "description": "Information about the study or project.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Study ID": {"type": "string", "description": "A unique alphanumeric identifier for this study."},
+          "Title": {"type": "string", "maxLength": 30, "description": "A name given to the study or project. Project title should be fewer than 30 words."},
+          "Description": {"type": "string", "maxLength": 300, "description": "A detailed description of the project which includes research goals and experimental approach. Project description should be fewer than 300 words."},
+          "Bibliographic Citation": {"type": "string", "description": "A citation for the study resource, following a standard format."},
+          "Created": {"type": "string", "format": "date", "description": "The date when the study was created or registered."},
+          "Workflow (optional)": {"type": "string", "description": "The workflow or protocol followed during the study."},
+          "Technology": {"type": "string", "description": "The sorting or visualisation technology used."},
+          "Licence (optional)": {"type": "string", "description": "Specifies the terms under which the data can be used, shared, or reused."}
+        },
+        "required": ["Study ID", "Title", "Description", "Bibliographic Citation", "Created", "Technology"]
+      }
+    },
+    
+    "person": {
+      "type": "array",
+      "description": "Information about people involved in the study.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Study ID": {"type": "string", "description": "A unique alphanumeric identifier for this study."},
+          "Orcid ID (optional)": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$", "description": "A 16-digit number that uniquely identifies researchers."},
+          "First Name": {"type": "string", "description": "A first name (or given name) is the personal name given to an individual conducting the study."},
+          "Last Name": {"type": "string", "description": "A last name (or surname) is the family name passed down from one generation to the next."},
+          "Email Address (optional)": {"type": "string", "format": "email", "description": "A unique identifier used to send and receive electronic messages over the internet."},
+          "Affiliation or Institution": {"type": "string", "description": "An organisation or institution that this person is associated with."},
+          "Funder (optional)": {"type": "string", "description": "A person or organization that supports (sponsors) something through some kind of financial contribution."},
+          "Grant Award (optional)": {"type": "string", "description": "A grant that directly or indirectly provides funding or sponsorship for the person to conduct the study."}
+        },
+        "required": ["Study ID", "First Name", "Last Name", "Affiliation or Institution"]
+      }
+    },
+    
+    "sample": {
+      "type": "array",
+      "description": "Information about biological samples.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Study ID": {"type": "string", "description": "A unique alphanumeric identifier for the study if referring to."},
+          "Sample ID": {"type": "string", "description": "A unique reference or identifier for the sample. This field must provide a consistent, unambiguous way to identify the sample within and across datasets."},
+          "Scientific Name or Organism (optional)": {"type": "string", "description": "The formal Latin name used to identify the organism from which the sample was derived."},
+          "Taxon ID": {"type": "string", "description": "A unique identifier (usually from a recognized taxonomy database like NCBI Taxonomy) that corresponds to the organism's scientific name."},
+          "Biosample Accession": {"type": "string", "description": "A unique identifier assigned to a biological sample after it has been submitted to a public database, such as the NCBI BioSample or ENA."}
+        },
+        "required": ["Study ID", "Sample ID", "Taxon ID", "Biosample Accession"]
+      }
+    },
+    
+    "dissociation": {
+      "type": "array",
+      "description": "Information about tissue dissociation protocols.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Study ID": {"type": "string", "description": "A unique alphanumeric identifier for this study."},
+          "Dissociation Protocol ID": {"type": "string", "description": "A unique alphanumeric code for the dissociation protocol in the study."},
+          "Protocol Name": {"type": "string", "description": "A descriptive name of the protocol used for single-cell sequencing."},
+          "Dissociation Description": {"type": "string", "description": "A free-text description of the process used to separate cells from tissues or cell aggregates."},
+          "Enrichment Markers (optional)": {"type": "string", "description": "Description of the specificity markers used to isolate cell populations, e.g. 'CD45+'."},
+          "Isolation Kit (optional)": {"type": "string", "description": "The kit used to isolate the cells."},
+          "Literature Source Reference (optional)": {"type": "string", "description": "Reference to literature sources that describe the protocol or methods used."},
+          "Protocols IO Reference (optional)": {"type": "string", "format": "uri", "description": "Reference link to protocols.io for additional details on the protocol."},
+          "Workflowhub Sop Reference (optional)": {"type": "string", "format": "uri", "description": "Reference to the Standard Operating Procedure (SOP) in workflow hub."},
+          "Dissociation Protocol Method (optional)": {"type": "string", "description": "The method used to dissociate tissues into single cells."},
+          "Single Cell Quality Metric (optional)": {"type": "string", "description": "Metrics used to assess the quality of single cells before sequencing."}
+        },
+        "required": ["Study ID", "Dissociation Protocol ID", "Protocol Name", "Dissociation Description"]
+      }
+    },
+    
+    "cell_suspension": {
+      "type": "array",
+      "description": "Information about cell suspensions.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Study ID": {"type": "string", "description": "A unique alphanumeric identifier for this study."},
+          "Cell Suspension ID": {"type": "string", "description": "A unique alphanumeric code for the cell suspension for the sample."},
+          "Sample ID": {"type": "string", "description": "A unique reference or identifier for the sample associated with the cell suspension."},
+          "Dissociation Protocol ID": {"type": "string", "description": "A unique alphanumeric code for the dissociation protocol in the study."},
+          "Suspension Type": {"type": "string", "description": "The type of suspension used to keep cells in solution during processing."},
+          "Cell Count (optional)": {"type": "integer", "minimum": 0, "description": "A number representing the number of cells in the sequencing library."},
+          "Cell Viability (optional)": {"type": "number", "minimum": 0, "maximum": 100, "description": "The percentage of living cells in a sample."},
+          "Cell Viability Assessment Method (optional)": {"type": "string", "description": "The method used to evaluate the viability of cells in the sample."},
+          "Cell Size (optional)": {"type": "number", "description": "The size of the cell, typically measured in micrometres."},
+          "Suspension Volume (µL) (optional)": {"type": "number", "description": "The volume of the cell suspension in microlitres (µL)."},
+          "Suspension Concentration Cells Per µL (optional)": {"type": "integer", "description": "The concentration of cells in the suspension in microlitres (µL)."},
+          "Suspension Dilution (optional)": {"type": "string", "description": "The dilution factor of the cell suspension."},
+          "Loading Volume Μl (optional)": {"type": "number", "description": "The volume of the cell suspension loaded into the single-cell RNA-sequencing system."},
+          "Suspension Dilution Buffer (optional)": {"type": "string", "description": "A solution used to dilute cell suspensions to a desired concentration."}
+        },
+        "required": ["Study ID", "Cell Suspension ID", "Sample ID", "Dissociation Protocol ID", "Suspension Type"]
+      }
+    },
+    
+    "lib_prep": {
+      "type": "array",
+      "description": "Information about library preparation.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Study ID": {"type": "string", "description": "A unique alphanumeric identifier for this study."},
+          "Library Preparation ID": {"type": "string", "description": "A unique alphanumeric reference or identifier for the library preparation protocol."},
+          "Cell Suspension ID": {"type": "string", "description": "A unique alphanumeric code for the cell suspension for the library preparation."},
+          "Library Preparation Kit": {"type": "string", "description": "Packaged kits tailored for specific sequencing workflows."},
+          "Library Preparation Kit Version": {"type": "string", "description": "The version number of the library preparation kit."},
+          "Amplification Method (optional)": {"type": "string", "description": "The method used to amplify the Complementary DNA (cDNA)."},
+          "cDNA Amplification Cycles (optional)": {"type": "integer", "description": "The number of cycles used during the cDNA amplification process."},
+          "Average Size Distribution (optional)": {"type": "integer", "description": "The average length of RNA fragments in base pairs after library preparation."},
+          "Library Construction Method (optional)": {"type": "string", "description": "The library construction method (including version) that was used."},
+          "Input Molecule (optional)": {"type": "string", "description": "The specific fraction of biological macromolecule from which the sequencing library is derived."},
+          "Primer (optional)": {"type": "string", "description": "The type of primer used for reverse transcription."},
+          "Primeness": {"type": "string", "enum": ["5'", "3'", ""], "description": "The end from which the molecule was sequenced."},
+          "End Bias (optional)": {"type": "string", "description": "The end bias of the library."},
+          "Library Strand (optional)": {"type": "string", "enum": ["sense", "antisense", "both", "none", ""], "description": "The cDNA strand of the library from which the reads derived."},
+          "Spike In": {"type": "string", "enum": ["Yes", "No"], "description": "External RNA added to the sample as a control. State whether spike-in was used."},
+          "Spike Type (optional)": {"type": "string", "description": "The specific type of external RNA used for spiking in."},
+          "Spike In Dilution Or Concentration (optional)": {"type": "string", "description": "The final concentration or dilution of the spike in mix."},
+          "i5 Index": {"type": "string", "description": "Barcode sequence used on the i5 adapter during library preparation."},
+          "i7 Index": {"type": "string", "description": "Barcode sequence used on the i7 adapter to distinguish samples."},
+          "Dual or Single Index": {"type": "string", "enum": ["Dual", "Single"], "description": "Specifies if both i5 and i7 indices or only one index was used."},
+          "I5 Sequence": {"type": "string", "description": "The nucleotide sequence of the i5 index used in multiplexing during sequencing."},
+          "i7 Sequence": {"type": "string", "description": "The specific nucleotide sequence of the i7 index used for a sample."},
+          "Plate ID (optional)": {"type": "string", "description": "Identifier for the 96-well plate used in sample preparation."},
+          "Well Row (optional)": {"type": "string", "description": "The row identifier in a 96-well plate indicating the sample's position."},
+          "Well Column (optional)": {"type": "string", "description": "The column identifier in a 96-well plate indicating the sample's position."},
+          "Cell Phenotype (optional)": {"type": "string", "description": "The cell marker for the Fluorescence-Activated Cell Sorting (FACS) of cells."},
+          "Design description (optional)": {"type": "string", "description": "The design of the library including details of how it was constructed."},
+          "Library selection": {"type": "string", "description": "The method used to select for or against, enrich, or screen the material being sequenced."},
+          "Library source": {"type": "string", "description": "The type of source material that is being sequenced."},
+          "Library strategy": {"type": "string", "description": "The sequencing technique intended for this library."}
+        },
+        "required": ["Study ID", "Library Preparation ID", "Cell Suspension ID", "Library Preparation Kit", "Library Preparation Kit Version", "Spike In", "i5 Index", "i7 Index", "Dual or Single Index", "Library selection", "Library source", "Library strategy"]
+      }
+    },
+    
+    "sequencing": {
+      "type": "array",
+      "description": "Information about sequencing runs.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Study ID": {"type": "string", "description": "A unique alphanumeric identifier for this study."},
+          "Sequencing ID": {"type": "string", "description": "A unique alphanumeric reference or identifier for the sequencing protocol."},
+          "Sequencing Platform Name": {"type": "string", "description": "The name of the sequencing platform used for the experiment."},
+          "Sequencing Instrument Model": {"type": "string", "description": "The machine or platform used for sequencing."},
+          "Library Layout": {"type": "string", "enum": ["Single", "Paired", "Other"], "description": "Specify whether to expect single, paired, or other configuration of reads."},
+          "UMI Barcode Read (optional)": {"type": "string", "description": "The type of read that contains the Unique Molecular Identifier (UMI) barcode."},
+          "UMI Barcode Offset (optional)": {"type": "integer", "minimum": 0, "description": "The offset in sequence of the UMI identifying barcode."},
+          "UMI Barcode Size (optional)": {"type": "integer", "minimum": 1, "description": "The size of the UMI identifying barcode."},
+          "Cell Barcode Read (optional)": {"type": "string", "description": "The type of read that contains the cell identifying barcode."},
+          "Cell Barcode Offset (optional)": {"type": "integer", "minimum": 0, "description": "The offset in sequence of the cell identifying barcode."},
+          "Cell Barcode Size (optional)": {"type": "integer", "minimum": 1, "description": "The size of the cell identifying barcode."},
+          "cDNA Read": {"type": "string", "description": "The actual nucleotide sequence obtained from cDNA during sequencing."},
+          "cDNA Read Offset (optional)": {"type": "integer", "minimum": 0, "description": "The starting position of the cDNA read within the entire sequence."},
+          "cDNA Read Size (optional)": {"type": "integer", "minimum": 1, "description": "The size of the cDNA read."}
+        },
+        "required": ["Study ID", "Sequencing ID", "Sequencing Platform Name", "Sequencing Instrument Model", "Library Layout", "cDNA Read"]
+      }
+    },
+    
+    "analysis_derived_data": {
+      "type": "array",
+      "description": "Information about data derived from analysis.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Study ID": {"type": "string", "description": "A unique alphanumeric identifier for this study."},
+          "File Derived From (optional)": {"type": "string", "description": "The name of the file that was used to generate the analysis derived data."},
+          "Inferred Cell Type (optional)": {"type": "string", "description": "Post analysis cell type or identity declaration based on expression profile or known gene function."},
+          "Post Analysis Cell Well Quality (optional)": {"type": "string", "description": "Performer defined measure of whether the read output from the cell was included in the sequencing analysis."},
+          "Other Derived Cell Attributes (optional)": {"type": "string", "description": "Any other cell level measurement or annotation as result of the analysis."}
+        },
+        "required": ["Study ID"]
+      }
+    },
+    
+    "raw_data_processing": {
+      "type": "array",
+      "description": "Information about raw data processing steps.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Study ID": {"type": "string", "description": "A unique alphanumeric identifier for this study."},
+          "Reference Genome (optional)": {"type": "string", "description": "Indicate version and include stable link to genome data."},
+          "Genome Annotation (optional)": {"type": "string", "description": "Indicate version and include stable link. Also indicate if any modification to the original annotation has been applied."},
+          "Annotation Filtering (optional)": {"type": "string", "description": "Indicate which features were filtered."},
+          "Genes vs Exons (optional)": {"type": "string", "description": "Quantification using whole gene intervals or exons."},
+          "Library Structure (optional)": {"type": "string", "description": "seqspec format."},
+          "Mapping and Demultiplexing Software (optional)": {"type": "string", "description": "Software used for mapping and demultiplexing."},
+          "Read Mapping Statistics (optional)": {"type": "string", "description": "Statistics of the Reads or Unique Molecular Identifier (UMI)."},
+          "Sequencing Saturation (optional)": {"type": "string", "description": "Sequencing saturation information."},
+          "UMIs or Barcode Distribution QC (optional)": {"type": "string", "description": "Show UMIs per barcode distribution and threshold applied."},
+          "Cell or Non-Cell Filtering Strategy (optional)": {"type": "string", "description": "UMI threshold used to discriminate cells from non-cells. Description of algorithm and parameters used."},
+          "Other Quality Filters Applied (optional)": {"type": "string", "description": "Cells/nuclei discarded based on % mitochondrial reads, % rRNA reads, etc."},
+          "Ambient RNA QC (optional)": {"type": "string", "description": "Report % UMIs in background cell barcodes, and algorithm used to remove ambient RNA."},
+          "Predicted Doublet Rate QC (optional)": {"type": "string", "description": "Predicted doublet rate information."},
+          "Individual Organism SNP Demultiplexing (optional)": {"type": "string", "description": "If carried out, show SNP partitioning quality, algorithm used."}
+        },
+        "required": ["Study ID"]
+      }
+    },
+    
+    "downstream_processing": {
+      "type": "array",
+      "description": "Information about downstream processing steps.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Study ID": {"type": "string", "description": "A unique alphanumeric identifier for this study."},
+          "Clustering Algorithm and Version (optional)": {"type": "string", "description": "If compared/integrated with existing datasets."},
+          "Clustering Parameters (optional)": {"type": "string", "description": "If compared/integrated with existing datasets."},
+          "Integration/Batch Correction (optional)": {"type": "string", "description": "If compared/integrated with existing datasets."}
+        },
+        "required": ["Study ID"]
+      }
+    },
+    
+    "data_availability_checklist": {
+      "type": "array",
+      "description": "Checklist of available data resources.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Study ID": {"type": "string", "description": "A unique alphanumeric identifier for this study."},
+          "Source Code (optional)": {"type": "string", "description": "If any newly developed code/software has been used."},
+          "UMI Count Matrix (optional)": {"type": "string", "description": "Gene x cell matrix with UMI counts for each gene in each cell."},
+          "Ensembl IDs (optional)": {"type": "string", "description": "Gene or transcript names should be listed as Ensembl (or other standardized ID)."},
+          "Functional Gene Annotations (optional)": {"type": "string", "description": "Any functional annotation generated/used."},
+          "Protein Models (optional)": {"type": "string", "description": "FASTA file with the predicted proteins associated to genes."},
+          "Cell Metadata (optional)": {"type": "string", "description": "Table mapping cell IDs to cluster/cell type/broad cell type annotations."},
+          "Cluster-Level Normalised Expression Tables (optional)": {"type": "string", "description": "Expression tables that show normalised gene expression at the cluster or cell-type level."},
+          "Other Resource Files (optional)": {"type": "string", "description": "Necessary to re-use and interpret the data."}
+        },
+        "required": ["Study ID"]
+      }
+    },
+    
+    "file": {
+      "type": "array",
+      "description": "Information about data files.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Study ID": {"type": "string", "description": "A unique alphanumeric identifier for this study."},
+          "File ID": {"type": "string", "description": "A unique alphanumeric identifier for this file."},
+          "Library Preparation ID": {"type": "string", "description": "A unique alphanumeric reference for the library preparation protocol."},
+          "Sequencing ID": {"type": "string", "description": "A unique alphanumeric reference for the sequencing protocol."},
+          "Read 1 File": {"type": "string", "description": "The name or accession of the file that contains read 1."},
+          "Read 2 File (optional)": {"type": "string", "description": "The name or accession of the file that contains read 2."},
+          "Index 1 File (optional)": {"type": "string", "description": "The name of the file that contains index 1."},
+          "Index 2 File (optional)": {"type": "string", "description": "The name of the file that contains index 2."},
+          "Read 1 Checksum": {"type": "string", "description": "Result of a hash function calculated on the content of the read 1 file to verify file integrity."},
+          "Read 2 Checksum (optional)": {"type": "string", "description": "Result of a hash function calculated on the content of the read 2 file to verify file integrity."},
+          "White List Barcode File (optional)": {"type": "string", "description": "A file containing the known cell barcodes in the dataset."}
+        },
+        "required": ["Study ID", "File ID", "Library Preparation ID", "Sequencing ID", "Read 1 File", "Read 1 Checksum"]
+      }
+    },
+    
+    "expression_data_process_setting": {
+      "type": "array",
+      "description": "Settings used for expression data processing.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Study ID": {"type": "string", "description": "A unique alphanumeric identifier for this study."},
+          "Expression Data Process Setting ID": {"type": "string", "description": "A unique alphanumeric identifier for the expression data process setting."},
+          "Matrix Type (optional)": {"type": "string", "description": "Matrix Type."},
+          "Reference Genome": {"type": "string", "description": "The associated reference genome."},
+          "Annotation Version (optional)": {"type": "string", "description": "The annotation version of the associated reference genome."},
+          "Normalisation Method (optional)": {"type": "string", "description": "Any normalisation processing performed."},
+          "Highly Variable Gene Selection (HVG) (optional)": {"type": "string", "description": "Number of Highly Variable Genes."},
+          "Dimensionality Reduction (optional)": {"type": "string", "description": "Method used to reduce dimensionality in the expression data."},
+          "Number of Nearest Neighbours (optional)": {"type": "integer", "description": "Number of nearest neighbours used to calculate cluster membership."},
+          "Clustering Algorithm (optional)": {"type": "string", "description": "Algorithm used to create clusters."},
+          "Clustering  Resolution (optional)": {"type": "number", "description": "Resolution parameter."},
+          "Clustering Distance Metric (optional)": {"type": "string", "description": "Metric used to calculate a point's distance to others."},
+          "Software Versions (optional)": {"type": "string", "description": "Primary software packages used for analysis."},
+          "Cell Type Annotation (optional)": {"type": "string", "description": "Tools and Databases used for cell annotation."},
+          "Generated by Pipeline (optional)": {"type": "string", "format": "uri", "description": "URL of the deposited pipeline used to create this data."},
+          "Notes (optional)": {"type": "string", "description": "Any other information."}
+        },
+        "required": ["Study ID", "Expression Data Process Setting ID", "Reference Genome"]
+      }
+    },
+    
+    "expression_data_file": {
+      "type": "array",
+      "description": "Information about expression data files.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Study ID": {"type": "string", "description": "A unique alphanumeric identifier for this study."},
+          "File ID": {"type": "string", "description": "A unique alphanumeric identifier for the expression data file."},
+          "Library Preparation ID": {"type": "string", "description": "A unique alphanumeric identifier for library preparation."},
+          "Expression Data Process Setting ID": {"type": "string", "description": "A unique alphanumeric identifier for the expression data process setting."},
+          "File Name": {"type": "string", "description": "Expression data file name."},
+          "File md5  Checkshum": {"type": "string", "description": "Calculated md5 checksum for this file."},
+          "File Format": {"type": "string", "description": "The format of the expression file, such as h5ad or rds."},
+          "Number of Cells (optional)": {"type": "integer", "minimum": 0, "description": "The number of cells represented in the expression data."},
+          "Number of Genes (optional)": {"type": "integer", "minimum": 0, "description": "The number of genes represented in the expression data."},
+          "File Size in Bytes (optional)": {"type": "integer", "minimum": 0, "description": "Size of the file recorded in bytes."},
+          "Date Generated (optional)": {"type": "string", "format": "date", "description": "Approximate date this expression data was generated."}
+        },
+        "required": ["Study ID", "File ID", "Library Preparation ID", "Expression Data Process Setting ID", "File Name", "File md5  Checkshum", "File Format"]
+      }
+    }
+  }
+}

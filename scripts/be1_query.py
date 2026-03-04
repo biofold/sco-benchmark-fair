@@ -1413,10 +1413,10 @@ Utility commands:
     )
     
     # Required arguments with validation
-    parser.add_argument('--geo', required=True, 
+    parser.add_argument('--geo', default='GSE243665', 
                        help='GEO accession ID (e.g., GSE243665)')
     
-    parser.add_argument('--metadata', required=True, 
+    parser.add_argument('--metadata', default='be1_metadata.json', 
                        type=existing_file,
                        help='JSON metadata file path')
     

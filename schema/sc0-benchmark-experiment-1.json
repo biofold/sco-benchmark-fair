@@ -1,0 +1,460 @@
+{
+  "schema": {
+    "name": "Single Cell Schema",
+    "version": "0.4",
+    "standard": "Darwin Core extension for single-cell RNA-seq",
+    "url": "https://singlecellschemas.org"
+  },
+  "study": [
+    {
+      "Study ID": "GSE243665",
+      "Title": "A single cell RNAseq benchmark experiment embedding 'controlled' cancer heterogeneity",
+      "Description": "This dataset provides single-cell transcriptomic profiles of seven lung cancer cell lines characterized by the expression of seven different driver genes (EGFR, ALK, MET, ERBB2, KRAS, BRAF, ROS1), leading to partially overlapping functional pathways. Additionally, PBMC from a healthy donor were also sequenced. The BE1 dataset serves as a controlled heterogeneous environment for the development and validation of methodologies for analysing cancer heterogeneity by means of scRNA-seq. BE1 includes scRNAseq for lung cancer cell lines with known driver mutations: PC9 (EGFR Del19, 4492 cells), A549 (KRAS p.G12S, 6898 cells), NCI-H596 (HTB178, MET Del14, 2965 cells), NCI-H1395 (CRL5868, BRAF p.G469A, 2673 cells), DV90 (ERBB2 p.V842I, 2998 cells), HCC78 (SLC34A2-ROS1 Fusion, 2748 cells), CCL.185.IG (EML4-ALK Fusion in A549 isogenic background, 6354 cells), and PBMCs from healthy donor. Total of 29,528 cells sequenced. Public release date: December 2, 2023.",
+      "Bibliographic Citation": "Arigoni M, Ratto ML, Riccardo F, Balmas E et al. A single cell RNAseq benchmark experiment embedding 'controlled' cancer heterogeneity. Sci Data 2024 Feb 2;11(1):159. PMID: 38307867; doi: 10.1038/s41597-024-03002-8",
+      "Created": "2023-12-02",
+      "Workflow (optional)": "10X Genomics Chromium Next GEM Single Cell 3' Kit v3.1 with Cell Multiplexing (CellPlex)",
+      "Technology": "10X Genomics",
+      "Licence (optional)": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "person": [
+    {
+      "Study ID": "GSE243665",
+      "Orcid ID (optional)": "",
+      "First Name": "Raffaele A.",
+      "Last Name": "Calogero",
+      "Email Address (optional)": "raffaele.calogero@unito.it",
+      "Affiliation or Institution": "University of Torino, Molecular Biotechnology Center, Bioinformatics and Genomics Unit, Via Nizza 52, Torino, 10126, Italy",
+      "Funder (optional)": "ELIXIR; CN00000013 'National Centre for HPC, Big Data and Quantum Computing'",
+      "Grant Award (optional)": "ELIXIR Single Cell Omics Community Implementation Study (SCONE)"
+    },
+    {
+      "Study ID": "GSE243665",
+      "Orcid ID (optional)": "",
+      "First Name": "ELIXIR",
+      "Last Name": "Single Cell Omics Community",
+      "Email Address (optional)": "single-cell-omics@elixir-europe.org",
+      "Affiliation or Institution": "ELIXIR Europe",
+      "Funder (optional)": "ELIXIR",
+      "Grant Award (optional)": "ELIXIR Single Cell Omics Community Implementation Study (SCONE)"
+    }
+  ],
+  "sample": [
+    {
+      "Study ID": "GSE243665",
+      "Sample ID": "BE1_PC9",
+      "Scientific Name or Organism (optional)": "Homo sapiens",
+      "Taxon ID": "9606",
+      "Biosample Accession": "Cell line: PC9 (Creative Bioarray CSC-C4619); EGFR Del19 activating mutation; PMID: 21167064"
+    },
+    {
+      "Study ID": "GSE243665",
+      "Sample ID": "BE1_A549",
+      "Scientific Name or Organism (optional)": "Homo sapiens",
+      "Taxon ID": "9606",
+      "Biosample Accession": "Cell line: A549 (ATCC-CCL-185); KRAS p.G12S mutation; PMID: 20358631"
+    },
+    {
+      "Study ID": "GSE243665",
+      "Sample ID": "BE1_NCI-H596",
+      "Scientific Name or Organism (optional)": "Homo sapiens",
+      "Taxon ID": "9606",
+      "Biosample Accession": "Cell line: NCI-H596 (ATCC-HTB-178); MET Del14 mutation; PMID: 35636967"
+    },
+    {
+      "Study ID": "GSE243665",
+      "Sample ID": "BE1_NCI-H1395",
+      "Scientific Name or Organism (optional)": "Homo sapiens",
+      "Taxon ID": "9606",
+      "Biosample Accession": "Cell line: NCI-H1395 (ATCC-CRL-5868); BRAF p.G469A gain of function mutation; PMID: 32540409"
+    },
+    {
+      "Study ID": "GSE243665",
+      "Sample ID": "BE1_DV90",
+      "Scientific Name or Organism (optional)": "Homo sapiens",
+      "Taxon ID": "9606",
+      "Biosample Accession": "Cell line: DV90 (DSMZ ACC 307); ERBB2 p.V842I mutation increasing kinase activity; PMID: 23220880"
+    },
+    {
+      "Study ID": "GSE243665",
+      "Sample ID": "BE1_HCC78",
+      "Scientific Name or Organism (optional)": "Homo sapiens",
+      "Taxon ID": "9606",
+      "Biosample Accession": "Cell line: HCC78 (DSMZ ACC 563); SLC34A2-ROS1 Fusion; PMID: 22919003"
+    },
+    {
+      "Study ID": "GSE243665",
+      "Sample ID": "BE1_CCL185-IG",
+      "Scientific Name or Organism (optional)": "Homo sapiens",
+      "Taxon ID": "9606",
+      "Biosample Accession": "Cell line: CCL-185-IG (ATCC-CCL-185-IG); EML4-ALK Fusion (EML4 exon13; ALK exon20) in A549 isogenic background; https://www.atcc.org/products/ccl-185ig"
+    },
+    {
+      "Study ID": "GSE243665",
+      "Sample ID": "BE1_PBMC",
+      "Scientific Name or Organism (optional)": "Homo sapiens",
+      "Taxon ID": "9606",
+      "Biosample Accession": "White blood cells from donor buffy coat (PBMC); healthy donor"
+    }
+  ],
+  "geo_samples": [
+    {
+      "Study ID": "GSE243665",
+      "GEO Sample Accession": "GSM7793690",
+      "Sample Description": "gene expression library 1"
+    },
+    {
+      "Study ID": "GSE243665",
+      "GEO Sample Accession": "GSM7793691",
+      "Sample Description": "gene expression library 2"
+    },
+    {
+      "Study ID": "GSE243665",
+      "GEO Sample Accession": "GSM7793692",
+      "Sample Description": "gene expression library 3"
+    },
+    {
+      "Study ID": "GSE243665",
+      "GEO Sample Accession": "GSM7793693",
+      "Sample Description": "gene expression library 4"
+    },
+    {
+      "Study ID": "GSE243665",
+      "GEO Sample Accession": "GSM7793694",
+      "Sample Description": "cell multiplexing library 1"
+    },
+    {
+      "Study ID": "GSE243665",
+      "GEO Sample Accession": "GSM7793695",
+      "Sample Description": "cell multiplexing library 2"
+    },
+    {
+      "Study ID": "GSE243665",
+      "GEO Sample Accession": "GSM7793696",
+      "Sample Description": "cell multiplexing library 3"
+    },
+    {
+      "Study ID": "GSE243665",
+      "GEO Sample Accession": "GSM7793697",
+      "Sample Description": "cell multiplexing library 4"
+    }
+  ],
+  "dissociation": [
+    {
+      "Study ID": "GSE243665",
+      "Dissociation Protocol ID": "DISSOC_10X_V3.1_CELLPLEX",
+      "Protocol Name": "10X Genomics Chromium Next GEM Single Cell 3' v3.1 with CellPlex Multiplexing",
+      "Dissociation Description": "Cell lines were cultured as per manufacturer recommendations. PC9, A549, NCI-H596, NCI-H1395, DV90, HCC78, CCL.185-IG, and PBMCs from healthy donor were processed. Cells were washed, incubated with Cell Multiplexing Oligos, and assessed for viability (>80%) before loading on Chromium Next GEM chip G.",
+      "Enrichment Markers (optional)": "None for cell lines; PBMCs processed without enrichment",
+      "Isolation Kit (optional)": "10X Genomics Chromium Next GEM Single Cell 3' Kit v3.1",
+      "Literature Source Reference (optional)": "10X Genomics documentation; Arigoni et al. 2024",
+      "Protocols IO Reference (optional)": "",
+      "Workflowhub Sop Reference (optional)": "",
+      "Dissociation Protocol Method (optional)": "Cell multiplexing with lipid-tagged oligonucleotides",
+      "Single Cell Quality Metric (optional)": "Cell viability >80%"
+    }
+  ],
+  "cell_suspension": [
+    {
+      "Study ID": "GSE243665",
+      "Cell Suspension ID": "CELLSUSP_PC9",
+      "Sample ID": "BE1_PC9",
+      "Dissociation Protocol ID": "DISSOC_10X_V3.1_CELLPLEX",
+      "Suspension Type": "Cell",
+      "Cell Count (optional)": "4492",
+      "Cell Viability (optional)": ">80",
+      "Cell Viability Assessment Method (optional)": "Automated cell counter",
+      "Cell Size (optional)": "",
+      "Suspension Volume (µL) (optional)": "",
+      "Suspension Concentration Cells Per µL (optional)": "",
+      "Suspension Dilution (optional)": "",
+      "Loading Volume Μl (optional)": "",
+      "Suspension Dilution Buffer (optional)": "PBS"
+    },
+    {
+      "Study ID": "GSE243665",
+      "Cell Suspension ID": "CELLSUSP_A549",
+      "Sample ID": "BE1_A549",
+      "Dissociation Protocol ID": "DISSOC_10X_V3.1_CELLPLEX",
+      "Suspension Type": "Cell",
+      "Cell Count (optional)": "6898",
+      "Cell Viability (optional)": ">80",
+      "Cell Viability Assessment Method (optional)": "Automated cell counter",
+      "Cell Size (optional)": "",
+      "Suspension Volume (µL) (optional)": "",
+      "Suspension Concentration Cells Per µL (optional)": "",
+      "Suspension Dilution (optional)": "",
+      "Loading Volume Μl (optional)": "",
+      "Suspension Dilution Buffer (optional)": "PBS"
+    },
+    {
+      "Study ID": "GSE243665",
+      "Cell Suspension ID": "CELLSUSP_NCI-H596",
+      "Sample ID": "BE1_NCI-H596",
+      "Dissociation Protocol ID": "DISSOC_10X_V3.1_CELLPLEX",
+      "Suspension Type": "Cell",
+      "Cell Count (optional)": "2965",
+      "Cell Viability (optional)": ">80",
+      "Cell Viability Assessment Method (optional)": "Automated cell counter",
+      "Cell Size (optional)": "",
+      "Suspension Volume (µL) (optional)": "",
+      "Suspension Concentration Cells Per µL (optional)": "",
+      "Suspension Dilution (optional)": "",
+      "Loading Volume Μl (optional)": "",
+      "Suspension Dilution Buffer (optional)": "PBS"
+    },
+    {
+      "Study ID": "GSE243665",
+      "Cell Suspension ID": "CELLSUSP_NCI-H1395",
+      "Sample ID": "BE1_NCI-H1395",
+      "Dissociation Protocol ID": "DISSOC_10X_V3.1_CELLPLEX",
+      "Suspension Type": "Cell",
+      "Cell Count (optional)": "2673",
+      "Cell Viability (optional)": ">80",
+      "Cell Viability Assessment Method (optional)": "Automated cell counter",
+      "Cell Size (optional)": "",
+      "Suspension Volume (µL) (optional)": "",
+      "Suspension Concentration Cells Per µL (optional)": "",
+      "Suspension Dilution (optional)": "",
+      "Loading Volume Μl (optional)": "",
+      "Suspension Dilution Buffer (optional)": "PBS"
+    },
+    {
+      "Study ID": "GSE243665",
+      "Cell Suspension ID": "CELLSUSP_DV90",
+      "Sample ID": "BE1_DV90",
+      "Dissociation Protocol ID": "DISSOC_10X_V3.1_CELLPLEX",
+      "Suspension Type": "Cell",
+      "Cell Count (optional)": "2998",
+      "Cell Viability (optional)": ">80",
+      "Cell Viability Assessment Method (optional)": "Automated cell counter",
+      "Cell Size (optional)": "",
+      "Suspension Volume (µL) (optional)": "",
+      "Suspension Concentration Cells Per µL (optional)": "",
+      "Suspension Dilution (optional)": "",
+      "Loading Volume Μl (optional)": "",
+      "Suspension Dilution Buffer (optional)": "PBS"
+    },
+    {
+      "Study ID": "GSE243665",
+      "Cell Suspension ID": "CELLSUSP_HCC78",
+      "Sample ID": "BE1_HCC78",
+      "Dissociation Protocol ID": "DISSOC_10X_V3.1_CELLPLEX",
+      "Suspension Type": "Cell",
+      "Cell Count (optional)": "2748",
+      "Cell Viability (optional)": ">80",
+      "Cell Viability Assessment Method (optional)": "Automated cell counter",
+      "Cell Size (optional)": "",
+      "Suspension Volume (µL) (optional)": "",
+      "Suspension Concentration Cells Per µL (optional)": "",
+      "Suspension Dilution (optional)": "",
+      "Loading Volume Μl (optional)": "",
+      "Suspension Dilution Buffer (optional)": "PBS"
+    },
+    {
+      "Study ID": "GSE243665",
+      "Cell Suspension ID": "CELLSUSP_CCL185-IG",
+      "Sample ID": "BE1_CCL185-IG",
+      "Dissociation Protocol ID": "DISSOC_10X_V3.1_CELLPLEX",
+      "Suspension Type": "Cell",
+      "Cell Count (optional)": "6354",
+      "Cell Viability (optional)": ">80",
+      "Cell Viability Assessment Method (optional)": "Automated cell counter",
+      "Cell Size (optional)": "",
+      "Suspension Volume (µL) (optional)": "",
+      "Suspension Concentration Cells Per µL (optional)": "",
+      "Suspension Dilution (optional)": "",
+      "Loading Volume Μl (optional)": "",
+      "Suspension Dilution Buffer (optional)": "PBS"
+    },
+    {
+      "Study ID": "GSE243665",
+      "Cell Suspension ID": "CELLSUSP_PBMC",
+      "Sample ID": "BE1_PBMC",
+      "Dissociation Protocol ID": "DISSOC_10X_V3.1_CELLPLEX",
+      "Suspension Type": "Cell",
+      "Cell Count (optional)": "500",
+      "Cell Viability (optional)": ">80",
+      "Cell Viability Assessment Method (optional)": "Automated cell counter",
+      "Cell Size (optional)": "",
+      "Suspension Volume (µL) (optional)": "",
+      "Suspension Concentration Cells Per µL (optional)": "",
+      "Suspension Dilution (optional)": "",
+      "Loading Volume Μl (optional)": "",
+      "Suspension Dilution Buffer (optional)": "PBS"
+    }
+  ],
+  "lib_prep": [
+    {
+      "Study ID": "GSE243665",
+      "Library Preparation ID": "LIBPREP_10X_V3.1",
+      "Cell Suspension ID": "CELLSUSP_PC9, CELLSUSP_A549, CELLSUSP_NCI-H596, CELLSUSP_NCI-H1395, CELLSUSP_DV90, CELLSUSP_HCC78, CELLSUSP_CCL185-IG, CELLSUSP_PBMC",
+      "Library Preparation Kit": "10X Genomics Chromium Next GEM Single Cell 3' Kit v3.1",
+      "Library Preparation Kit Version": "3.1",
+      "Amplification Method (optional)": "PCR",
+      "cDNA Amplification Cycles (optional)": "",
+      "Average Size Distribution (optional)": "",
+      "Library Construction Method (optional)": "10X Genomics 3' v3.1",
+      "Input Molecule (optional)": "RNA",
+      "Primer (optional)": "Oligo-dT",
+      "Primeness": "3",
+      "End Bias (optional)": "3",
+      "Library Strand (optional)": "Antisense",
+      "Spike In": "No",
+      "Spike Type (optional)": "",
+      "Spike In Dilution Or Concentration (optional)": "",
+      "i5 Index": "Sample-specific",
+      "i7 Index": "Sample-specific",
+      "Dual or Single Index": "Dual",
+      "I5 Sequence": "Configuration in multi_gex.csv",
+      "i7 Sequence": "Configuration in multi_gex.csv",
+      "Plate ID (optional)": "",
+      "Well Row (optional)": "",
+      "Well Column (optional)": "",
+      "Cell Phenotype (optional)": "Lung cancer cell lines with driver mutations plus healthy PBMCs",
+      "Design description (optional)": "10X Genomics 3' CellPlex protocol",
+      "Library selection": "cDNA",
+      "Library source": "TRANSCRIPTOMIC",
+      "Library strategy": "RNA-Seq"
+    }
+  ],
+  "sequencing": [
+    {
+      "Study ID": "GSE243665",
+      "Sequencing ID": "SEQ_ILLUMINA_NOVASEQ_6000",
+      "Sequencing Platform Name": "ILLUMINA",
+      "Sequencing Instrument Model": "Illumina NovaSeq 6000",
+      "Library Layout": "Paired",
+      "UMI Barcode Read (optional)": "Read 1",
+      "UMI Barcode Offset (optional)": "16",
+      "UMI Barcode Size (optional)": "10",
+      "Cell Barcode Read (optional)": "Read 1",
+      "Cell Barcode Offset (optional)": "0",
+      "Cell Barcode Size (optional)": "16",
+      "cDNA Read": "Read 2",
+      "cDNA Read Offset (optional)": "0",
+      "cDNA Read Size (optional)": "150"
+    }
+  ],
+  "analysis_derived_data": [
+    {
+      "Study ID": "GSE243665",
+      "File Derived From (optional)": "Cell Ranger v7.1.0 output files",
+      "Inferred Cell Type (optional)": "Cell line identity based on driver mutation",
+      "Post Analysis Cell Well Quality (optional)": "Pass (cells passing QC filters)",
+      "Other Derived Cell Attributes (optional)": "Driver mutation status, cell line origin, total UMIs, genes detected, mitochondrial percentage"
+    }
+  ],
+  "raw_data_processing": [
+    {
+      "Study ID": "GSE243665",
+      "Reference Genome (optional)": "GRCh38 (10X Genomics reference 2020-A) - https://cf.10xgenomics.com/supp/cell-exp/refdata-gex-GRCh38-2020-A.tar.gz",
+      "Genome Annotation (optional)": "Ensembl v99/GRCh38 (via refdata-gex-GRCh38-2020-A)",
+      "Annotation Filtering (optional)": "Standard 10X Genomics filtering with intron-mode included",
+      "Genes vs Exons (optional)": "Gene quantification including intronic reads",
+      "Library Structure (optional)": "Single-cell 3' v3.1 with CellPlex",
+      "Mapping and Demultiplexing Software (optional)": "Cell Ranger v7.1.0",
+      "Read Mapping Statistics (optional)": "Available in GEO submission; average mapping rate >90%",
+      "Sequencing Saturation (optional)": "Available in GEO submission; ranges from 38.7% to 60.6% per cell line",
+      "UMIs or Barcode Distribution QC (optional)": "Cell Ranger's default cell-calling algorithm",
+      "Cell or Non-Cell Filtering Strategy (optional)": "Cell Ranger's cell-calling algorithm",
+      "Other Quality Filters Applied (optional)": "Cells with mitochondrial read percentage >20% excluded; cells with <500 UMI counts excluded; cells with <200 detected genes excluded",
+      "Ambient RNA QC (optional)": "Estimated <5% ambient contamination across samples",
+      "Predicted Doublet Rate QC (optional)": "Estimated 2-4% doublet rate",
+      "Individual Organism SNP Demultiplexing (optional)": "Not applicable (all samples human cell lines)"
+    }
+  ],
+  "downstream_processing": [
+    {
+      "Study ID": "GSE243665",
+      "Clustering Algorithm and Version (optional)": "Louvain modularity (for validation BE1-500 dataset)",
+      "Clustering Parameters (optional)": "Resolution: 0.1 for BE1-500 validation",
+      "Integration/Batch Correction (optional)": "Not applied for validation; pseudo-bulks compared with CCLE bulk transcriptomes"
+    }
+  ],
+  "data_availability_checklist": [
+    {
+      "Study ID": "GSE243665",
+      "Source Code (optional)": "Cell Ranger v7.1.0 Docker container available at docker.io/repbioinfo/cellranger.2023.7.1.0; R Shiny App for generating controlled mixtures available at http://aisc.hpc4ai.unito.it:3838/; Scripts available in repository",
+      "UMI Count Matrix (optional)": "Available at GEO: GSE243665 and figshare: 10.6084/m9.figshare.23939481.v1 (10X Genomics sparse matrix format)",
+      "Ensembl IDs (optional)": "Ensembl v99/GRCh38 gene IDs included in count matrices",
+      "Functional Gene Annotations (optional)": "Supporting data at figshare: 10.6084/m9.figshare.23284748.v1 - includes CCLE database info and driver gene targets relationships",
+      "Protein Models (optional)": "Not provided",
+      "Cell Metadata (optional)": "Available at GEO and figshare; includes per cell line QC metrics, metrics_summary.csv, web_summary.html",
+      "Cluster-Level Normalised Expression Tables (optional)": "Validation data available in manuscript; pseudo-bulks generated for BE1-500 dataset",
+      "Other Resource Files (optional)": "FASTQ data available at SRA: SRP462078; Code and documentation at figshare: 10.6084/m9.figshare.24744996.v1"
+    }
+  ],
+  "file": [
+    {
+      "Study ID": "GSE243665",
+      "File ID": "FASTQ_GSE243665_SRA",
+      "Library Preparation ID": "LIBPREP_10X_V3.1",
+      "Sequencing ID": "SEQ_ILLUMINA_NOVASEQ_6000",
+      "Read 1 File": "SRA accession: SRP462078 (https://identifiers.org/ncbi/insdc.sra:SRP462078)",
+      "Read 2 File (optional)": "SRA accession: SRP462078",
+      "Index 1 File (optional)": "Included in SRA submission",
+      "Index 2 File (optional)": "",
+      "Read 1 Checksum": "Available via SRA",
+      "Read 2 Checksum (optional)": "Available via SRA",
+      "White List Barcode File (optional)": "Included in Cell Ranger v7.1.0 distribution"
+    }
+  ],
+  "expression_data_process_setting": [
+    {
+      "Study ID": "GSE243665",
+      "Expression Data Process Setting ID": "EXPSET_CELLRANGER_V7.1_INTROMODE",
+      "Matrix Type (optional)": "raw_counts",
+      "Reference Genome": "GRCh38 (10X Genomics reference 2020-A)",
+      "Annotation Version (optional)": "Ensembl v99/GRCh38",
+      "Normalisation Method (optional)": "To be applied by users; validation used log2CPM for pseudo-bulks",
+      "Highly Variable Gene Selection (HVG) (optional)": "Validation used COMET software to identify top 100 gene markers per cluster",
+      "Dimensionality Reduction (optional)": "To be applied by users; validation used hierarchical clustering",
+      "Number of Nearest Neighbours (optional)": "To be defined by users",
+      "Clustering Algorithm (optional)": "To be defined by users; validation used Seurat/Louvain",
+      "Clustering  Resolution (optional)": "To be defined by users; validation used 0.1",
+      "Clustering Distance Metric (optional)": "To be defined by users; validation used Euclidean",
+      "Software Versions (optional)": "Cell Ranger v7.1.0; rCASC; Seurat; COMET",
+      "Cell Type Annotation (optional)": "Cell line identity confirmed by comparison with CCLE bulk transcriptomes",
+      "Generated by Pipeline (optional)": "Cell Ranger v7.1.0",
+      "Notes (optional)": "Benchmarking dataset designed for evaluating computational tools for cancer heterogeneity analysis; intronic reads included in quantification"
+    }
+  ],
+  "expression_data_file": [
+    {
+      "Study ID": "GSE243665",
+      "File ID": "COUNT_MATRICES_FIGSHARE_23939481",
+      "Library Preparation ID": "LIBPREP_10X_V3.1",
+      "Expression Data Process Setting ID": "EXPSET_CELLRANGER_V7.1_INTROMODE",
+      "File Name": "BE1_cell_line_sparse_matrices (10X Genomics format)",
+      "File md5  Checkshum": "Available via figshare",
+      "File Format": "10X Genomics sparse matrix format (HDF5, MTX)",
+      "Number of Cells (optional)": "29528 total",
+      "Number of Genes (optional)": "~33,000 total features; ~20,000 protein-coding genes",
+      "File Size in Bytes (optional)": "Available via figshare; approximately 2.5GB total",
+      "Date Generated (optional)": "2023"
+    }
+  ],
+  "repository_metadata": {
+    "name": "sco-benchmark-experiments",
+    "url": "https://github.com/biofold/sco-benchmark-experiments",
+    "doi": "10.5281/zenodo.XXXXXXXX", 
+    "description": "FAIR metadata and query tools for the ELIXIR Single Cell Omics BE1 benchmark dataset.",
+    "version": "1.0.0",
+    "date_released": "2024-03-04",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "citation": {
+      "preferred-citation": {
+        "title": "BE1 Benchmark Dataset for Single-Cell RNA Sequencing: Controlled Cancer Heterogeneity FAIR Metadata",
+        "authors": [
+          {"family-names": "ELIXIR", "given-names": "Single Cell Omics Community"}
+        ],
+        "year": "2024",
+        "doi": "10.5281/zenodo.XXXXXXXX",
+        "url": "https://github.com/biofold/sco-benchmark-experiments"
+      }
+    }
+  }
+}

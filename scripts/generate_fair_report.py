@@ -1606,11 +1606,11 @@ class FAIRVisualizer:
                     <a href="../index.html" class="dashboard-link">
                         <i class="fas fa-home"></i> SCO Benchmark FAIR
                     </a>
-                    <a href="/ppi-benchmark-fair/fair-report/index.html" class="dashboard-link">
+                    <a href="/sco-benchmark-experiments/fair-report/index.html" class="dashboard-link">
                         <i class="fas fa-bullseye"></i> FAIRification 
                     </a>
                     <!--
-                    <a href="/ppi-benchmark-fair/ml-report/index.html" class="dashboard-link">
+                    <a href="/sco-benchmark-experiments/ml-report/index.html" class="dashboard-link">
                         <i class="fa-solid fa-brain"></i> Machine Learning
                     </a>
                     -->
@@ -1726,7 +1726,7 @@ class FAIRVisualizer:
                     Evaluation of FAIR principles compliance for scientific data repositories
                 </div>
                 <div class="footer-content" style="margin-top:25px;">
-                    <a href="https://github.com/biofold/ppi-benchmark-fair">
+                    <a href="https://github.com/biofold/sco-benchmark-experiments">
                     <img src="https://img.shields.io/badge/FAIR_Score-80.0%2F100-brightgreen" alt="FAIR Score: 80.0/100"></a>
                     <a href="https://creativecommons.org/licenses/by/4.0/">
                     <img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg" alt="License: CC BY-NC 4.0"></a>

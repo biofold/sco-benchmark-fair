@@ -1601,7 +1601,7 @@ class FAIRVisualizer:
         <header>
             <div class="header-content">
                 <h1><strong>FAIR Analysis Report</strong></h1>
-                <h4><strong>Transforming ELIXIR SCO benchmark experiments into FAIR-compliant, machine learning-ready resource/strong></h4>
+                <h4><strong>Transforming ELIXIR SCO benchmark experiments into FAIR-compliant, machine learning-ready resource</strong></h4>
                 <div>
                     <a href="../index.html" class="dashboard-link">
                         <i class="fas fa-home"></i> SCO Benchmark FAIR
@@ -1722,11 +1722,10 @@ class FAIRVisualizer:
         html_parts.append(f"""
         <footer id="footer">
             <div class="container">
-                <h1>FAIR Analysis Report</h1>
-                <h4 style="color:white;"><strong>
-                    Transforming ELIXIR SCO benchmark experiments into FAIR-compliant, machine learning-ready resource
-                    </strong></h4>
-                
+                <div class="footer-content">
+                    Evaluation of FAIR principles compliance for scientific data repositories
+                </div>
+
                 <div class="footer-content" style="margin-top:25px;">
                     <a href="https://github.com/biofold/sco-benchmark-fair" target="_blank">
                     <img src="https://img.shields.io/badge/FAIR_Score-80.0%2F100-brightgreen" alt="FAIR Score: 80.0/100"></a>

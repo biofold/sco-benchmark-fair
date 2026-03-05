@@ -1725,7 +1725,7 @@ class FAIRVisualizer:
                 <h1>FAIR Analysis Report</h1>
                 <h4 style="color:white;"><strong>
                     Transforming ELIXIR SCO benchmark experiments into FAIR-compliant, machine learning-ready resource
-                </strong></h4>
+                    </strong></h4>
                 
                 <div class="footer-content" style="margin-top:25px;">
                     <a href="https://github.com/biofold/sco-benchmark-fair" target="_blank">

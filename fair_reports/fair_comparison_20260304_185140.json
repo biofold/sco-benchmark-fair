@@ -1,0 +1,1144 @@
+{
+  "timestamp": "2026-03-04T18:51:40.221812",
+  "repositories_compared": 3,
+  "scores": [
+    {
+      "repository": "https://github.com/biofold/sco-benchmark-experiments",
+      "stars": 0,
+      "findable": 80.0,
+      "accessible": 80.0,
+      "interoperable": 65.0,
+      "reusable": 85.0,
+      "total": 77.5,
+      "missing_findable": [
+        "Repository topics",
+        "GitHub releases",
+        "Documentation wiki",
+        "License in metadata"
+      ],
+      "missing_accessible": [
+        "Access rights in metadata"
+      ],
+      "missing_interoperable": [
+        "Controlled vocabularies",
+        "Usage scripts",
+        "Format information"
+      ],
+      "missing_reusable": [
+        "Contact information",
+        "Issue templates"
+      ],
+      "detailed_scores": {
+        "findable": {
+          "score": 80,
+          "max_score": 100,
+          "percentage": 80.0,
+          "missing": [
+            "Repository topics",
+            "GitHub releases",
+            "Documentation wiki",
+            "License in metadata"
+          ]
+        },
+        "accessible": {
+          "score": 80,
+          "max_score": 100,
+          "percentage": 80.0,
+          "missing": [
+            "Access rights in metadata"
+          ]
+        },
+        "interoperable": {
+          "score": 65,
+          "max_score": 100,
+          "percentage": 65.0,
+          "missing": [
+            "Controlled vocabularies",
+            "Usage scripts",
+            "Format information"
+          ]
+        },
+        "reusable": {
+          "score": 85,
+          "max_score": 100,
+          "percentage": 85.0,
+          "missing": [
+            "Contact information",
+            "Issue templates"
+          ]
+        }
+      },
+      "metadata_summary": {
+        "has_license": false,
+        "has_doi": false,
+        "has_contact": false,
+        "has_provenance": true,
+        "has_access_rights": false,
+        "has_format_info": false,
+        "has_vocabularies": false,
+        "standards_used": [
+          "dcat",
+          "schema.org"
+        ],
+        "license_types": [],
+        "formats_mentioned": []
+      },
+      "metadata_files_count": 2
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "stars": 0,
+      "findable": 60.0,
+      "accessible": 65.0,
+      "interoperable": 55.00000000000001,
+      "reusable": 25.0,
+      "total": 51.25,
+      "missing_findable": [
+        "DOI or Persistent ID",
+        "Repository topics",
+        "Project website",
+        "GitHub releases",
+        "Documentation wiki",
+        "License in metadata"
+      ],
+      "missing_accessible": [
+        "Access rights in metadata",
+        "Download instructions"
+      ],
+      "missing_interoperable": [
+        "Data schema",
+        "Controlled vocabularies",
+        "Format information"
+      ],
+      "missing_reusable": [
+        "Citation file",
+        "Provenance information",
+        "Examples/notebooks",
+        "Contact information",
+        "Detailed README",
+        "Issue templates"
+      ],
+      "detailed_scores": {
+        "findable": {
+          "score": 60,
+          "max_score": 100,
+          "percentage": 60.0,
+          "missing": [
+            "DOI or Persistent ID",
+            "Repository topics",
+            "Project website",
+            "GitHub releases",
+            "Documentation wiki",
+            "License in metadata"
+          ]
+        },
+        "accessible": {
+          "score": 65,
+          "max_score": 100,
+          "percentage": 65.0,
+          "missing": [
+            "Access rights in metadata",
+            "Download instructions"
+          ]
+        },
+        "interoperable": {
+          "score": 55,
+          "max_score": 100,
+          "percentage": 55.00000000000001,
+          "missing": [
+            "Data schema",
+            "Controlled vocabularies",
+            "Format information"
+          ]
+        },
+        "reusable": {
+          "score": 25,
+          "max_score": 100,
+          "percentage": 25.0,
+          "missing": [
+            "Citation file",
+            "Provenance information",
+            "Examples/notebooks",
+            "Contact information",
+            "Detailed README",
+            "Issue templates"
+          ]
+        }
+      },
+      "metadata_summary": {
+        "has_license": false,
+        "has_doi": false,
+        "has_contact": false,
+        "has_provenance": false,
+        "has_access_rights": false,
+        "has_format_info": false,
+        "has_vocabularies": false,
+        "standards_used": [
+          "dublin-core"
+        ],
+        "license_types": [],
+        "formats_mentioned": []
+      },
+      "metadata_files_count": 2
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "stars": 0,
+      "findable": 20.0,
+      "accessible": 40.0,
+      "interoperable": 0.0,
+      "reusable": 0.0,
+      "total": 15.0,
+      "missing_findable": [
+        "Metadata file",
+        "Structured metadata",
+        "DOI or Persistent ID",
+        "Repository topics",
+        "GitHub releases",
+        "Documentation wiki",
+        "License in metadata"
+      ],
+      "missing_accessible": [
+        "Open license",
+        "Access rights in metadata",
+        "Download instructions"
+      ],
+      "missing_interoperable": [
+        "Standard formats",
+        "Data schema",
+        "Standard metadata schema",
+        "Controlled vocabularies",
+        "Usage scripts",
+        "Format information"
+      ],
+      "missing_reusable": [
+        "LICENSE file",
+        "Citation file",
+        "Provenance information",
+        "Examples/notebooks",
+        "Contact information",
+        "Detailed README",
+        "Issue templates"
+      ],
+      "detailed_scores": {
+        "findable": {
+          "score": 20,
+          "max_score": 100,
+          "percentage": 20.0,
+          "missing": [
+            "Metadata file",
+            "Structured metadata",
+            "DOI or Persistent ID",
+            "Repository topics",
+            "GitHub releases",
+            "Documentation wiki",
+            "License in metadata"
+          ]
+        },
+        "accessible": {
+          "score": 40,
+          "max_score": 100,
+          "percentage": 40.0,
+          "missing": [
+            "Open license",
+            "Access rights in metadata",
+            "Download instructions"
+          ]
+        },
+        "interoperable": {
+          "score": 0,
+          "max_score": 100,
+          "percentage": 0.0,
+          "missing": [
+            "Standard formats",
+            "Data schema",
+            "Standard metadata schema",
+            "Controlled vocabularies",
+            "Usage scripts",
+            "Format information"
+          ]
+        },
+        "reusable": {
+          "score": 0,
+          "max_score": 100,
+          "percentage": 0.0,
+          "missing": [
+            "LICENSE file",
+            "Citation file",
+            "Provenance information",
+            "Examples/notebooks",
+            "Contact information",
+            "Detailed README",
+            "Issue templates"
+          ]
+        }
+      },
+      "metadata_summary": {
+        "has_license": false,
+        "has_doi": false,
+        "has_contact": false,
+        "has_provenance": false,
+        "has_access_rights": false,
+        "has_format_info": false,
+        "has_vocabularies": false,
+        "standards_used": [],
+        "license_types": [],
+        "formats_mentioned": []
+      },
+      "metadata_files_count": 0
+    }
+  ],
+  "improvements": [
+    {
+      "repository": "https://github.com/biofold/sco-benchmark-experiments",
+      "principle": "Findable",
+      "missing": "Repository topics",
+      "action": "Add relevant topics to repository settings on GitHub",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "repository": "https://github.com/biofold/sco-benchmark-experiments",
+      "principle": "Findable",
+      "missing": "GitHub releases",
+      "action": "Create a release with version tag for stable versions",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "repository": "https://github.com/biofold/sco-benchmark-experiments",
+      "principle": "Findable",
+      "missing": "Documentation wiki",
+      "action": "Enable wiki and add basic documentation on GitHub",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "repository": "https://github.com/biofold/sco-benchmark-experiments",
+      "principle": "Findable",
+      "missing": "License in metadata",
+      "action": "Include license information in metadata files",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "repository": "https://github.com/biofold/sco-benchmark-experiments",
+      "principle": "Accessible",
+      "missing": "Access rights in metadata",
+      "action": "Specify access rights (open, restricted, closed) in metadata",
+      "priority": "Low",
+      "potential_points": 20
+    },
+    {
+      "repository": "https://github.com/biofold/sco-benchmark-experiments",
+      "principle": "Interoperable",
+      "missing": "Controlled vocabularies",
+      "action": "Use controlled vocabularies/ontologies for metadata fields",
+      "priority": "Low",
+      "potential_points": 15
+    },
+    {
+      "repository": "https://github.com/biofold/sco-benchmark-experiments",
+      "principle": "Interoperable",
+      "missing": "Usage scripts",
+      "action": "Add Python/R scripts demonstrating how to load and use the data",
+      "priority": "Low",
+      "potential_points": 10
+    },
+    {
+      "repository": "https://github.com/biofold/sco-benchmark-experiments",
+      "principle": "Interoperable",
+      "missing": "Format information",
+      "action": "Include format information (MIME types, extensions) in metadata",
+      "priority": "Low",
+      "potential_points": 10
+    },
+    {
+      "repository": "https://github.com/biofold/sco-benchmark-experiments",
+      "principle": "Reusable",
+      "missing": "Contact information",
+      "action": "Include contact information (email, ORCID) in metadata",
+      "priority": "Medium",
+      "potential_points": 10
+    },
+    {
+      "repository": "https://github.com/biofold/sco-benchmark-experiments",
+      "principle": "Reusable",
+      "missing": "Issue templates",
+      "action": "Add .github/ISSUE_TEMPLATE/ for structured bug reports and feature requests",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "principle": "Findable",
+      "missing": "DOI or Persistent ID",
+      "action": "Register dataset with Zenodo/Figshare to get DOI, include in metadata",
+      "priority": "High",
+      "potential_points": 15
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "principle": "Findable",
+      "missing": "Repository topics",
+      "action": "Add relevant topics to repository settings on GitHub",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "principle": "Findable",
+      "missing": "Project website",
+      "action": "Add homepage URL in repository settings or README",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "principle": "Findable",
+      "missing": "GitHub releases",
+      "action": "Create a release with version tag for stable versions",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "principle": "Findable",
+      "missing": "Documentation wiki",
+      "action": "Enable wiki and add basic documentation on GitHub",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "principle": "Findable",
+      "missing": "License in metadata",
+      "action": "Include license information in metadata files",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "principle": "Accessible",
+      "missing": "Access rights in metadata",
+      "action": "Specify access rights (open, restricted, closed) in metadata",
+      "priority": "Low",
+      "potential_points": 20
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "principle": "Accessible",
+      "missing": "Download instructions",
+      "action": "Add 'Getting Started' section to README with clear steps",
+      "priority": "Medium",
+      "potential_points": 15
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "principle": "Interoperable",
+      "missing": "Data schema",
+      "action": "Add schema.json or data_dictionary.md describing data structure",
+      "priority": "Medium",
+      "potential_points": 20
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "principle": "Interoperable",
+      "missing": "Controlled vocabularies",
+      "action": "Use controlled vocabularies/ontologies for metadata fields",
+      "priority": "Low",
+      "potential_points": 15
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "principle": "Interoperable",
+      "missing": "Format information",
+      "action": "Include format information (MIME types, extensions) in metadata",
+      "priority": "Low",
+      "potential_points": 10
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "principle": "Reusable",
+      "missing": "Citation file",
+      "action": "Add CITATION.cff file for proper academic citation",
+      "priority": "Low",
+      "potential_points": 20
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "principle": "Reusable",
+      "missing": "Provenance information",
+      "action": "Add provenance information (creation date, version, history) in metadata",
+      "priority": "Low",
+      "potential_points": 15
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "principle": "Reusable",
+      "missing": "Examples/notebooks",
+      "action": "Create examples/ directory with Jupyter notebooks or scripts",
+      "priority": "Low",
+      "potential_points": 15
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "principle": "Reusable",
+      "missing": "Contact information",
+      "action": "Include contact information (email, ORCID) in metadata",
+      "priority": "Medium",
+      "potential_points": 10
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "principle": "Reusable",
+      "missing": "Detailed README",
+      "action": "Expand README with sections: Installation, Usage, Examples, API, Contributing",
+      "priority": "Low",
+      "potential_points": 10
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "principle": "Reusable",
+      "missing": "Issue templates",
+      "action": "Add .github/ISSUE_TEMPLATE/ for structured bug reports and feature requests",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Findable",
+      "missing": "Metadata file",
+      "action": "Add metadata.json following schema.org or DataCite schema",
+      "priority": "Medium",
+      "potential_points": 25
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Findable",
+      "missing": "Structured metadata",
+      "action": "Add structured metadata file (JSON/YAML/XML) in bioschema/ or metadata/ directory",
+      "priority": "High",
+      "potential_points": 20
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Findable",
+      "missing": "DOI or Persistent ID",
+      "action": "Register dataset with Zenodo/Figshare to get DOI, include in metadata",
+      "priority": "High",
+      "potential_points": 15
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Findable",
+      "missing": "Repository topics",
+      "action": "Add relevant topics to repository settings on GitHub",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Findable",
+      "missing": "GitHub releases",
+      "action": "Create a release with version tag for stable versions",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Findable",
+      "missing": "Documentation wiki",
+      "action": "Enable wiki and add basic documentation on GitHub",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Findable",
+      "missing": "License in metadata",
+      "action": "Include license information in metadata files",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Accessible",
+      "missing": "Open license",
+      "action": "Add LICENSE file with MIT, Apache, CC-BY, or other open license",
+      "priority": "High",
+      "potential_points": 25
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Accessible",
+      "missing": "Access rights in metadata",
+      "action": "Specify access rights (open, restricted, closed) in metadata",
+      "priority": "Low",
+      "potential_points": 20
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Accessible",
+      "missing": "Download instructions",
+      "action": "Add 'Getting Started' section to README with clear steps",
+      "priority": "Medium",
+      "potential_points": 15
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Interoperable",
+      "missing": "Standard formats",
+      "action": "Convert data to CSV, JSON, HDF5, or other standard formats",
+      "priority": "Medium",
+      "potential_points": 25
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Interoperable",
+      "missing": "Data schema",
+      "action": "Add schema.json or data_dictionary.md describing data structure",
+      "priority": "Medium",
+      "potential_points": 20
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Interoperable",
+      "missing": "Standard metadata schema",
+      "action": "Use standard metadata schema like Schema.org, DataCite, or Bioschemas",
+      "priority": "Medium",
+      "potential_points": 20
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Interoperable",
+      "missing": "Controlled vocabularies",
+      "action": "Use controlled vocabularies/ontologies for metadata fields",
+      "priority": "Low",
+      "potential_points": 15
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Interoperable",
+      "missing": "Usage scripts",
+      "action": "Add Python/R scripts demonstrating how to load and use the data",
+      "priority": "Low",
+      "potential_points": 10
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Interoperable",
+      "missing": "Format information",
+      "action": "Include format information (MIME types, extensions) in metadata",
+      "priority": "Low",
+      "potential_points": 10
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Reusable",
+      "missing": "LICENSE file",
+      "action": "Add explicit LICENSE file with clear terms of use",
+      "priority": "High",
+      "potential_points": 25
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Reusable",
+      "missing": "Citation file",
+      "action": "Add CITATION.cff file for proper academic citation",
+      "priority": "Low",
+      "potential_points": 20
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Reusable",
+      "missing": "Provenance information",
+      "action": "Add provenance information (creation date, version, history) in metadata",
+      "priority": "Low",
+      "potential_points": 15
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Reusable",
+      "missing": "Examples/notebooks",
+      "action": "Create examples/ directory with Jupyter notebooks or scripts",
+      "priority": "Low",
+      "potential_points": 15
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Reusable",
+      "missing": "Contact information",
+      "action": "Include contact information (email, ORCID) in metadata",
+      "priority": "Medium",
+      "potential_points": 10
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Reusable",
+      "missing": "Detailed README",
+      "action": "Expand README with sections: Installation, Usage, Examples, API, Contributing",
+      "priority": "Low",
+      "potential_points": 10
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "principle": "Reusable",
+      "missing": "Issue templates",
+      "action": "Add .github/ISSUE_TEMPLATE/ for structured bug reports and feature requests",
+      "priority": "Low",
+      "potential_points": 5
+    }
+  ],
+  "improvement_summary": {
+    "https://github.com/biofold/sco-benchmark-experiments": [
+      {
+        "repository": "https://github.com/biofold/sco-benchmark-experiments",
+        "principle": "Findable",
+        "missing": "Repository topics",
+        "action": "Add relevant topics to repository settings on GitHub",
+        "priority": "Low",
+        "potential_points": 5
+      },
+      {
+        "repository": "https://github.com/biofold/sco-benchmark-experiments",
+        "principle": "Findable",
+        "missing": "GitHub releases",
+        "action": "Create a release with version tag for stable versions",
+        "priority": "Low",
+        "potential_points": 5
+      },
+      {
+        "repository": "https://github.com/biofold/sco-benchmark-experiments",
+        "principle": "Findable",
+        "missing": "Documentation wiki",
+        "action": "Enable wiki and add basic documentation on GitHub",
+        "priority": "Low",
+        "potential_points": 5
+      },
+      {
+        "repository": "https://github.com/biofold/sco-benchmark-experiments",
+        "principle": "Findable",
+        "missing": "License in metadata",
+        "action": "Include license information in metadata files",
+        "priority": "Low",
+        "potential_points": 5
+      },
+      {
+        "repository": "https://github.com/biofold/sco-benchmark-experiments",
+        "principle": "Accessible",
+        "missing": "Access rights in metadata",
+        "action": "Specify access rights (open, restricted, closed) in metadata",
+        "priority": "Low",
+        "potential_points": 20
+      },
+      {
+        "repository": "https://github.com/biofold/sco-benchmark-experiments",
+        "principle": "Interoperable",
+        "missing": "Controlled vocabularies",
+        "action": "Use controlled vocabularies/ontologies for metadata fields",
+        "priority": "Low",
+        "potential_points": 15
+      },
+      {
+        "repository": "https://github.com/biofold/sco-benchmark-experiments",
+        "principle": "Interoperable",
+        "missing": "Usage scripts",
+        "action": "Add Python/R scripts demonstrating how to load and use the data",
+        "priority": "Low",
+        "potential_points": 10
+      },
+      {
+        "repository": "https://github.com/biofold/sco-benchmark-experiments",
+        "principle": "Interoperable",
+        "missing": "Format information",
+        "action": "Include format information (MIME types, extensions) in metadata",
+        "priority": "Low",
+        "potential_points": 10
+      },
+      {
+        "repository": "https://github.com/biofold/sco-benchmark-experiments",
+        "principle": "Reusable",
+        "missing": "Contact information",
+        "action": "Include contact information (email, ORCID) in metadata",
+        "priority": "Medium",
+        "potential_points": 10
+      },
+      {
+        "repository": "https://github.com/biofold/sco-benchmark-experiments",
+        "principle": "Reusable",
+        "missing": "Issue templates",
+        "action": "Add .github/ISSUE_TEMPLATE/ for structured bug reports and feature requests",
+        "priority": "Low",
+        "potential_points": 5
+      }
+    ],
+    "https://github.com/elixir-europe/sco-community": [
+      {
+        "repository": "https://github.com/elixir-europe/sco-community",
+        "principle": "Findable",
+        "missing": "DOI or Persistent ID",
+        "action": "Register dataset with Zenodo/Figshare to get DOI, include in metadata",
+        "priority": "High",
+        "potential_points": 15
+      },
+      {
+        "repository": "https://github.com/elixir-europe/sco-community",
+        "principle": "Findable",
+        "missing": "Repository topics",
+        "action": "Add relevant topics to repository settings on GitHub",
+        "priority": "Low",
+        "potential_points": 5
+      },
+      {
+        "repository": "https://github.com/elixir-europe/sco-community",
+        "principle": "Findable",
+        "missing": "Project website",
+        "action": "Add homepage URL in repository settings or README",
+        "priority": "Low",
+        "potential_points": 5
+      },
+      {
+        "repository": "https://github.com/elixir-europe/sco-community",
+        "principle": "Findable",
+        "missing": "GitHub releases",
+        "action": "Create a release with version tag for stable versions",
+        "priority": "Low",
+        "potential_points": 5
+      },
+      {
+        "repository": "https://github.com/elixir-europe/sco-community",
+        "principle": "Findable",
+        "missing": "Documentation wiki",
+        "action": "Enable wiki and add basic documentation on GitHub",
+        "priority": "Low",
+        "potential_points": 5
+      },
+      {
+        "repository": "https://github.com/elixir-europe/sco-community",
+        "principle": "Findable",
+        "missing": "License in metadata",
+        "action": "Include license information in metadata files",
+        "priority": "Low",
+        "potential_points": 5
+      },
+      {
+        "repository": "https://github.com/elixir-europe/sco-community",
+        "principle": "Accessible",
+        "missing": "Access rights in metadata",
+        "action": "Specify access rights (open, restricted, closed) in metadata",
+        "priority": "Low",
+        "potential_points": 20
+      },
+      {
+        "repository": "https://github.com/elixir-europe/sco-community",
+        "principle": "Accessible",
+        "missing": "Download instructions",
+        "action": "Add 'Getting Started' section to README with clear steps",
+        "priority": "Medium",
+        "potential_points": 15
+      },
+      {
+        "repository": "https://github.com/elixir-europe/sco-community",
+        "principle": "Interoperable",
+        "missing": "Data schema",
+        "action": "Add schema.json or data_dictionary.md describing data structure",
+        "priority": "Medium",
+        "potential_points": 20
+      },
+      {
+        "repository": "https://github.com/elixir-europe/sco-community",
+        "principle": "Interoperable",
+        "missing": "Controlled vocabularies",
+        "action": "Use controlled vocabularies/ontologies for metadata fields",
+        "priority": "Low",
+        "potential_points": 15
+      },
+      {
+        "repository": "https://github.com/elixir-europe/sco-community",
+        "principle": "Interoperable",
+        "missing": "Format information",
+        "action": "Include format information (MIME types, extensions) in metadata",
+        "priority": "Low",
+        "potential_points": 10
+      },
+      {
+        "repository": "https://github.com/elixir-europe/sco-community",
+        "principle": "Reusable",
+        "missing": "Citation file",
+        "action": "Add CITATION.cff file for proper academic citation",
+        "priority": "Low",
+        "potential_points": 20
+      },
+      {
+        "repository": "https://github.com/elixir-europe/sco-community",
+        "principle": "Reusable",
+        "missing": "Provenance information",
+        "action": "Add provenance information (creation date, version, history) in metadata",
+        "priority": "Low",
+        "potential_points": 15
+      },
+      {
+        "repository": "https://github.com/elixir-europe/sco-community",
+        "principle": "Reusable",
+        "missing": "Examples/notebooks",
+        "action": "Create examples/ directory with Jupyter notebooks or scripts",
+        "priority": "Low",
+        "potential_points": 15
+      },
+      {
+        "repository": "https://github.com/elixir-europe/sco-community",
+        "principle": "Reusable",
+        "missing": "Contact information",
+        "action": "Include contact information (email, ORCID) in metadata",
+        "priority": "Medium",
+        "potential_points": 10
+      },
+      {
+        "repository": "https://github.com/elixir-europe/sco-community",
+        "principle": "Reusable",
+        "missing": "Detailed README",
+        "action": "Expand README with sections: Installation, Usage, Examples, API, Contributing",
+        "priority": "Low",
+        "potential_points": 10
+      },
+      {
+        "repository": "https://github.com/elixir-europe/sco-community",
+        "principle": "Reusable",
+        "missing": "Issue templates",
+        "action": "Add .github/ISSUE_TEMPLATE/ for structured bug reports and feature requests",
+        "priority": "Low",
+        "potential_points": 5
+      }
+    ],
+    "https://github.com/kendomaniac/B1": [
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Findable",
+        "missing": "Metadata file",
+        "action": "Add metadata.json following schema.org or DataCite schema",
+        "priority": "Medium",
+        "potential_points": 25
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Findable",
+        "missing": "Structured metadata",
+        "action": "Add structured metadata file (JSON/YAML/XML) in bioschema/ or metadata/ directory",
+        "priority": "High",
+        "potential_points": 20
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Findable",
+        "missing": "DOI or Persistent ID",
+        "action": "Register dataset with Zenodo/Figshare to get DOI, include in metadata",
+        "priority": "High",
+        "potential_points": 15
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Findable",
+        "missing": "Repository topics",
+        "action": "Add relevant topics to repository settings on GitHub",
+        "priority": "Low",
+        "potential_points": 5
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Findable",
+        "missing": "GitHub releases",
+        "action": "Create a release with version tag for stable versions",
+        "priority": "Low",
+        "potential_points": 5
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Findable",
+        "missing": "Documentation wiki",
+        "action": "Enable wiki and add basic documentation on GitHub",
+        "priority": "Low",
+        "potential_points": 5
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Findable",
+        "missing": "License in metadata",
+        "action": "Include license information in metadata files",
+        "priority": "Low",
+        "potential_points": 5
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Accessible",
+        "missing": "Open license",
+        "action": "Add LICENSE file with MIT, Apache, CC-BY, or other open license",
+        "priority": "High",
+        "potential_points": 25
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Accessible",
+        "missing": "Access rights in metadata",
+        "action": "Specify access rights (open, restricted, closed) in metadata",
+        "priority": "Low",
+        "potential_points": 20
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Accessible",
+        "missing": "Download instructions",
+        "action": "Add 'Getting Started' section to README with clear steps",
+        "priority": "Medium",
+        "potential_points": 15
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Interoperable",
+        "missing": "Standard formats",
+        "action": "Convert data to CSV, JSON, HDF5, or other standard formats",
+        "priority": "Medium",
+        "potential_points": 25
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Interoperable",
+        "missing": "Data schema",
+        "action": "Add schema.json or data_dictionary.md describing data structure",
+        "priority": "Medium",
+        "potential_points": 20
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Interoperable",
+        "missing": "Standard metadata schema",
+        "action": "Use standard metadata schema like Schema.org, DataCite, or Bioschemas",
+        "priority": "Medium",
+        "potential_points": 20
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Interoperable",
+        "missing": "Controlled vocabularies",
+        "action": "Use controlled vocabularies/ontologies for metadata fields",
+        "priority": "Low",
+        "potential_points": 15
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Interoperable",
+        "missing": "Usage scripts",
+        "action": "Add Python/R scripts demonstrating how to load and use the data",
+        "priority": "Low",
+        "potential_points": 10
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Interoperable",
+        "missing": "Format information",
+        "action": "Include format information (MIME types, extensions) in metadata",
+        "priority": "Low",
+        "potential_points": 10
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Reusable",
+        "missing": "LICENSE file",
+        "action": "Add explicit LICENSE file with clear terms of use",
+        "priority": "High",
+        "potential_points": 25
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Reusable",
+        "missing": "Citation file",
+        "action": "Add CITATION.cff file for proper academic citation",
+        "priority": "Low",
+        "potential_points": 20
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Reusable",
+        "missing": "Provenance information",
+        "action": "Add provenance information (creation date, version, history) in metadata",
+        "priority": "Low",
+        "potential_points": 15
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Reusable",
+        "missing": "Examples/notebooks",
+        "action": "Create examples/ directory with Jupyter notebooks or scripts",
+        "priority": "Low",
+        "potential_points": 15
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Reusable",
+        "missing": "Contact information",
+        "action": "Include contact information (email, ORCID) in metadata",
+        "priority": "Medium",
+        "potential_points": 10
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Reusable",
+        "missing": "Detailed README",
+        "action": "Expand README with sections: Installation, Usage, Examples, API, Contributing",
+        "priority": "Low",
+        "potential_points": 10
+      },
+      {
+        "repository": "https://github.com/kendomaniac/B1",
+        "principle": "Reusable",
+        "missing": "Issue templates",
+        "action": "Add .github/ISSUE_TEMPLATE/ for structured bug reports and feature requests",
+        "priority": "Low",
+        "potential_points": 5
+      }
+    ]
+  },
+  "ranking": [
+    {
+      "repository": "https://github.com/biofold/sco-benchmark-experiments",
+      "total": 77.5,
+      "findable": 80.0,
+      "accessible": 80.0,
+      "interoperable": 65.0,
+      "reusable": 85.0,
+      "metadata_files": 2
+    },
+    {
+      "repository": "https://github.com/elixir-europe/sco-community",
+      "total": 51.25,
+      "findable": 60.0,
+      "accessible": 65.0,
+      "interoperable": 55.00000000000001,
+      "reusable": 25.0,
+      "metadata_files": 2
+    },
+    {
+      "repository": "https://github.com/kendomaniac/B1",
+      "total": 15.0,
+      "findable": 20.0,
+      "accessible": 40.0,
+      "interoperable": 0.0,
+      "reusable": 0.0,
+      "metadata_files": 0
+    }
+  ],
+  "statistics": {
+    "average_total": 47.916666666666664,
+    "median_total": 51.25,
+    "std_total": 31.383050096084244,
+    "highest_total": 77.5,
+    "lowest_total": 15.0,
+    "average_metadata_files": 1.3333333333333333,
+    "average_by_principle": {
+      "findable": 53.333333333333336,
+      "accessible": 61.666666666666664,
+      "interoperable": 40.0,
+      "reusable": 36.666666666666664
+    }
+  }
+}

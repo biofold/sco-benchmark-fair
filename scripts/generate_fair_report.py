@@ -1723,7 +1723,7 @@ class FAIRVisualizer:
         <footer id="footer">
             <div class="container">
                 <div class="footer-content">
-                    Evaluation of FAIR principles compliance for scientific data repositories
+                    Enhancing the FAIRness of the ELIXIR SCO Benchmark Experiments for Cancer Heterogeneity Analysis
                 </div>
                 <div class="footer-content" style="margin-top:25px;">
                     <a href="https://github.com/biofold/sco-benchmark-experiments">

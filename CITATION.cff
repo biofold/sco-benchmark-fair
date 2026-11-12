@@ -1,105 +1,34 @@
 cff-version: 1.2.0
-message: "If you use this dataset or its FAIR metadata, please cite both the original publication and this metadata implementation."
-title: "BE1 Benchmark Dataset for Single-Cell RNA Sequencing: Controlled Cancer Heterogeneity"
-abstract: "A 10XGenomics single-cell RNA sequencing benchmark dataset providing a controlled heterogeneous environment using seven lung cancer cell lines characterised by the expression of seven different driver genes (EGFR, ALK, MET, ERBB2, KRAS, BRAF, ROS1). The dataset includes 29,528 cells from PC9 (EGFR Del19), A549 (KRAS G12S), NCI-H596 (MET Del14), NCI-H1395 (BRAF G469A), DV90 (ERBB2 V842I), HCC78 (ROS1 fusion), CCL.185-IG (ALK fusion) cell lines, plus PBMC control. This resource enables the development and validation of computational methodologies for analysing cancer heterogeneity through scRNA-seq. FAIR-compliant metadata following Single Cell Schema v0.4 (Darwin Core extension) with enhanced interoperability and machine learning readiness."
+message: "If you use this FAIR metadata package, please cite both the original publication and this package."
+title: "ELIXIR - Single Cell Omics Benchmark - FAIR Metadata"
+type: dataset
+abstract: "FAIR metadata, query tool and web portal for the benchmark experiment 1 (BE1) of the ELIXIR Single Cell Omics community: a 10x Genomics single-cell RNA-seq experiment with seven lung cancer cell lines carrying different driver alterations and a PBMC population (GEO series GSE243665; 29,128 cells from the cell lines and 478 PBMC). The experiment is described with the Single Cell Schema version 0.4 and linked to the public records of GEO, SRA, BioProject and figshare. The count data are not part of this repository."
 authors:
-  - family-names: "ELIXIR"
-    given-names: "Single Cell Omics Community"
-    orcid: "https://orcid.org/0000-0002-1825-0097"
-    affiliation: "ELIXIR Europe"
-    email: "single-cell-omics@elixir-europe.org"
-
-# Reference to the original dataset publication
-references:
-  - type: "article"
-    authors:
-      - family-names: "Arigoni"
-        given-names: "Maddalena"
-      - family-names: "Ratto"
-        given-names: "Maria Luisa"
-      - family-names: "Riccardo"
-        given-names: "Federica"
-      - family-names: "Balmas"
-        given-names: "Elisa"
-      - family-names: "Calogero"
-        given-names: "Lorenzo"
-      - family-names: "Cordero"
-        given-names: "Francesca"
-      - family-names: "Beccuti"
-        given-names: "Marco"
-      - family-names: "Calogero"
-        given-names: "Raffaele A."
-      - family-names: "Alessandri"
-        given-names: "Luca"
-    title: "A single cell RNAseq benchmark experiment embedding 'controlled' cancer heterogeneity"
-    journal: "Scientific Data"
-    year: "2024"
-    volume: "11"
-    issue: "1"
-    article-number: "159"
-    doi: "10.1038/s41597-024-03002-8"
-    start: "159"
-    end: "159"
-    pmid: "38307867"
-    pmcid: "PMC10837414"
-    url: "https://www.nature.com/articles/s41597-024-03002-8"
-
+  - family-names: "Capriotti"
+    given-names: "Emidio"
+    orcid: "https://orcid.org/0000-0002-2323-0963"
+  - family-names: "Martelli"
+    given-names: "Pier Luigi"
+    orcid: "https://orcid.org/0000-0002-0274-5669"
+  - family-names: "Savojardo"
+    given-names: "Castrense"
+    orcid: "https://orcid.org/0000-0002-7359-0633"
 version: "1.0.0"
-# --- UPDATED: Added Zenodo DOI for the repository itself ---
-doi: "10.5281/zenodo.XXXXXXXX"  # Replace with your actual Zenodo DOI
-# --- Also keep the figshare DOI if it's for a different component ---
-date-released: "2024-02-02"
-license: "CC BY-NC 4.0"
-license-url: "https://creativecommons.org/licenses/by/4.0/"
-repository-code: "https://github.com/biofold/sco-benchmark-experiments" # Updated to correct repo
-url: "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE243665"
+license: CC-BY-NC-4.0
+repository-code: "https://github.com/biofold/sco-benchmark-fair"
+url: "https://biofold.github.io/sco-benchmark-fair"
 keywords:
   - "single-cell RNA sequencing"
+  - "benchmark"
   - "cancer heterogeneity"
-  - "lung cancer"
-  - "benchmark dataset"
-  - "driver mutations"
-  - "EGFR"
-  - "KRAS"
-  - "BRAF"
-  - "ALK"
-  - "ROS1"
-  - "MET"
-  - "ERBB2"
-  - "10X Genomics"
   - "FAIR data"
   - "Single Cell Schema"
-  - "controlled heterogeneity"
-type: "dataset"
-
-# Primary data access points
-identifiers:
-  - type: "GEO"
-    value: "GSE243665"
-    description: "Gene Expression Omnibus accession for count matrices"
-  - type: "BioProject"
-    value: "PRJNA1019356"
-    description: "NCBI BioProject accession for raw sequencing data"
-  - type: "SRA"
-    value: "SRP462078"
-    description: "Sequence Read Archive accession"
-  - type: "figshare"
-    value: "10.6084/m9.figshare.23939481.v1"
-    description: "Count matrices in 10X Genomics sparse matrix format"
-  - type: "figshare"
-    value: "10.6084/m9.figshare.23284748.v1"
-    description: "Supporting CCLE data and driver gene targets"
-  - type: "figshare"
-    value: "10.6084/m9.figshare.24744996.v1"
-    description: "Code and documentation"
-  # --- OPTIONAL: Add Zenodo as an identifier for the repository ---
-  - type: "Zenodo"
-    value: "10.5281/zenodo.XXXXXXXX"
-    description: "Archived version of this repository with FAIR metadata"
-
-# Preferred citation format
+  - "ELIXIR"
+  - "10x Genomics"
+  - "metadata"
 preferred-citation:
-  type: "article"
+  type: article
+  title: "A single cell RNAseq benchmark experiment embedding \"controlled\" cancer heterogeneity"
   authors:
     - family-names: "Arigoni"
       given-names: "Maddalena"
@@ -113,106 +42,136 @@ preferred-citation:
       given-names: "Lorenzo"
     - family-names: "Cordero"
       given-names: "Francesca"
+      orcid: "https://orcid.org/0000-0002-3143-3330"
     - family-names: "Beccuti"
       given-names: "Marco"
     - family-names: "Calogero"
       given-names: "Raffaele A."
+      orcid: "https://orcid.org/0000-0002-2848-628X"
     - family-names: "Alessandri"
       given-names: "Luca"
-  title: "A single cell RNAseq benchmark experiment embedding 'controlled' cancer heterogeneity"
   journal: "Scientific Data"
-  year: "2024"
-  volume: "11"
-  issue: "1"
-  article-number: "159"
-  doi: "10.1038/s41597-024-03002-8"
-
-# How to cite this metadata implementation
-# --- UPDATED: Include the Zenodo DOI in the citation suggestion ---
-cite-as: "ELIXIR Single Cell Omics Community. (2024). BE1 Benchmark Dataset for Single-Cell RNA Sequencing: Controlled Cancer Heterogeneity FAIR Metadata (v1.0) [Dataset]. Zenodo: 10.5281/zenodo.XXXXXXXX; GEO: GSE243665; figshare: 10.6084/m9.figshare.23939481"
-
-# Dataset composition (unchanged)
-composition:
-  samples: 8
-  cell_lines: 7
-  total_cells: 29528
-  species: "Homo sapiens"
-  taxon_id: 9606
-  platform: "Illumina NovaSeq 6000"
-  chemistry: "10X Genomics Single Cell 3' v3.1"
-  cell_lines_detail:
-    - name: "PC9"
-      mutation: "EGFR Del19"
-      cells: 4492
-    - name: "A549"
-      mutation: "KRAS G12S"
-      cells: 6898
-    - name: "NCI-H596 (HTB178)"
-      mutation: "MET Del14"
-      cells: 2965
-    - name: "NCI-H1395 (CRL5868)"
-      mutation: "BRAF G469A"
-      cells: 2673
-    - name: "DV90"
-      mutation: "ERBB2 V842I"
-      cells: 2998
-    - name: "HCC78"
-      mutation: "SLC34A2-ROS1 fusion"
-      cells: 2748
-    - name: "CCL.185-IG"
-      mutation: "EML4-ALK fusion"
-      cells: 6354
-    - name: "PBMC"
-      description: "Peripheral blood mononuclear cells from healthy donor"
-      cells: 500
-
-# Processing information (unchanged)
-processing:
-  software: "Cell Ranger v7.1.0"
-  reference_genome: "GRCh38-2020-A"
-  quantification: "intron-mode included"
-  total_reads: "2.46 billion"
-  q30_threshold: "≥71.26%"
-
-# Tools and resources (unchanged)
-tools:
-  - name: "R Shiny Mixing App"
-    url: "https://github.com/kendomaniac/BE1"
-    description: "Generate controlled mixtures of cell lines at user-defined ratios"
-  - name: "Docker Container"
-    url: "docker.io/repbioinfo/cellranger.2023.7.1.0"
-    description: "Cell Ranger v7.1.0 for reproducing count matrix generation"
-
-# Schema information (unchanged)
-schema:
-  name: "Single Cell Schema"
-  version: "0.4"
-  standard: "Darwin Core extension for single-cell RNA-seq"
-  url: "https://singlecellschemas.org"
-
-# Notes for users (unchanged)
-notes: |
-  This FAIR metadata implementation accompanies the original BE1 benchmark dataset.
-  Please cite both:
-  1. The original dataset publication (Arigoni et al., 2024)
-  2. This metadata implementation (ELIXIR Single Cell Omics Community, 2024)
-  
-  The dataset contains 29,528 single-cell transcriptomes from seven lung cancer cell lines
-  with distinct driver mutations, providing controlled heterogeneity for benchmarking
-  computational methods. The dataset is available through:
-  - GEO: GSE243665 (count matrices and configuration)
-  - SRA: SRP462078 / PRJNA1019356 (raw FASTQ)
-  - figshare: 10.6084/m9.figshare.23939481.v1 (count matrices in 10X format)
-  - figshare: 10.6084/m9.figshare.23284748.v1 (supporting CCLE data and driver gene targets)
-  
-  An R Shiny App (http://aisc.hpc4ai.unito.it:3838/) enables generation of custom
-  mixtures of cell lines at user-defined ratios for creating benchmark datasets with
-  controlled heterogeneity levels.
-  
-  Key features:
-  - Seven driver mutations with partially overlapping pathways
-  - Isogenic pair (A549 and CCL.185-IG ALK fusion) for subtle variation detection
-  - PBMC control for normal cell comparison
-  - Complete Cell Ranger v7.1.0 processing with intron-mode quantification
-  - Validation against CCLE bulk transcriptomes
-  - BE1-500 validation dataset (500 cells per line)
+  year: 2024
+  month: 2
+  volume: 11
+  issue: 1
+  doi: "10.1038/s41597-024-03002-y"
+  url: "https://www.nature.com/articles/s41597-024-03002-y"
+references:
+  - type: data
+    title: "A single cell RNAseq benchmark experiment embedding \"controlled\" cancer heterogeneity (GEO series GSE243665)"
+    authors:
+      - family-names: "Arigoni"
+        given-names: "Maddalena"
+      - family-names: "Ratto"
+        given-names: "Maria Luisa"
+      - family-names: "Riccardo"
+        given-names: "Federica"
+      - family-names: "Balmas"
+        given-names: "Elisa"
+      - family-names: "Calogero"
+        given-names: "Lorenzo"
+      - family-names: "Cordero"
+        given-names: "Francesca"
+        orcid: "https://orcid.org/0000-0002-3143-3330"
+      - family-names: "Beccuti"
+        given-names: "Marco"
+      - family-names: "Calogero"
+        given-names: "Raffaele A."
+        orcid: "https://orcid.org/0000-0002-2848-628X"
+      - family-names: "Alessandri"
+        given-names: "Luca"
+    url: "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE243665"
+    year: 2023
+  - type: data
+    title: "BE1 10XGenomics count matrices"
+    authors:
+      - family-names: "Arigoni"
+        given-names: "Maddalena"
+      - family-names: "Ratto"
+        given-names: "Maria Luisa"
+      - family-names: "Riccardo"
+        given-names: "Federica"
+      - family-names: "Balmas"
+        given-names: "Elisa"
+      - family-names: "Calogero"
+        given-names: "Lorenzo"
+      - family-names: "Cordero"
+        given-names: "Francesca"
+        orcid: "https://orcid.org/0000-0002-3143-3330"
+      - family-names: "Beccuti"
+        given-names: "Marco"
+      - family-names: "Calogero"
+        given-names: "Raffaele A."
+        orcid: "https://orcid.org/0000-0002-2848-628X"
+      - family-names: "Alessandri"
+        given-names: "Luca"
+    doi: "10.6084/m9.figshare.23939481.v1"
+    year: 2023
+  - type: data
+    title: "Supporting information for BE1 experiment"
+    authors:
+      - family-names: "Arigoni"
+        given-names: "Maddalena"
+      - family-names: "Ratto"
+        given-names: "Maria Luisa"
+      - family-names: "Riccardo"
+        given-names: "Federica"
+      - family-names: "Balmas"
+        given-names: "Elisa"
+      - family-names: "Calogero"
+        given-names: "Lorenzo"
+      - family-names: "Cordero"
+        given-names: "Francesca"
+        orcid: "https://orcid.org/0000-0002-3143-3330"
+      - family-names: "Beccuti"
+        given-names: "Marco"
+      - family-names: "Calogero"
+        given-names: "Raffaele A."
+        orcid: "https://orcid.org/0000-0002-2848-628X"
+      - family-names: "Alessandri"
+        given-names: "Luca"
+    doi: "10.6084/m9.figshare.23284748.v1"
+    year: 2023
+  - type: data
+    title: "Supporting data for \"A single cell RNAseq benchmark experiment embedding controlled cancer heterogeneity\""
+    authors:
+      - family-names: "Arigoni"
+        given-names: "Maddalena"
+      - family-names: "Ratto"
+        given-names: "Maria Luisa"
+      - family-names: "Riccardo"
+        given-names: "Federica"
+      - family-names: "Balmas"
+        given-names: "Elisa"
+      - family-names: "Calogero"
+        given-names: "Lorenzo"
+      - family-names: "Cordero"
+        given-names: "Francesca"
+        orcid: "https://orcid.org/0000-0002-3143-3330"
+      - family-names: "Beccuti"
+        given-names: "Marco"
+      - family-names: "Calogero"
+        given-names: "Raffaele A."
+        orcid: "https://orcid.org/0000-0002-2848-628X"
+      - family-names: "Alessandri"
+        given-names: "Luca"
+    doi: "10.6084/m9.figshare.24744996.v1"
+    year: 2023
+  - type: report
+    title: "FAIRification of the ELIXIR Single Cell Omics Benchmark"
+    authors:
+      - family-names: "Capriotti"
+        given-names: "Emidio"
+        orcid: "https://orcid.org/0000-0002-2323-0963"
+      - family-names: "Martelli"
+        given-names: "Pier Luigi"
+        orcid: "https://orcid.org/0000-0002-0274-5669"
+      - family-names: "Savojardo"
+        given-names: "Castrense"
+        orcid: "https://orcid.org/0000-0002-7359-0633"
+    year: 2026
+    doi: "10.5281/zenodo.24150233"
+    publisher:
+      name: "Zenodo"
+    url: "https://doi.org/10.5281/zenodo.24150233"

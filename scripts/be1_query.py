@@ -1385,30 +1385,30 @@ def main():
         epilog="""
 Examples:
   # Basic queries
-  python be1_query.py --geo GSE243665 --metadata be1_metadata.json --gene EGFR,KRAS,BRAF
-  python be1_query.py --geo GSE243665 --metadata be1_metadata.json --cell AAACCCAAGAGG-1
+  python be1_query.py --geo GSE243665 --metadata scrna-schema/sco-benchmark-experiment-1.json --gene EGFR,KRAS,BRAF
+  python be1_query.py --geo GSE243665 --metadata scrna-schema/sco-benchmark-experiment-1.json --cell AAACCCAAGAGG-1
   
   # With validation and thresholds
-  python be1_query.py --geo GSE243665 --metadata be1_metadata.json --gene EGFR --min-umi 2 --threshold-type absolute
+  python be1_query.py --geo GSE243665 --metadata scrna-schema/sco-benchmark-experiment-1.json --gene EGFR --min-umi 2 --threshold-type absolute
   
   # With filtering
-  python be1_query.py --geo GSE243665 --metadata be1_metadata.json --gene EGFR,KRAS --cell-line A549 --mutation "EGFR Del19"
+  python be1_query.py --geo GSE243665 --metadata scrna-schema/sco-benchmark-experiment-1.json --gene EGFR,KRAS --cell-line A549 --mutation "EGFR Del19"
   
   # Advanced options
-  python be1_query.py --geo GSE243665 --metadata be1_metadata.json --gene EGFR --top-n 50 --verbose --format json --output results.json
+  python be1_query.py --geo GSE243665 --metadata scrna-schema/sco-benchmark-experiment-1.json --gene EGFR --top-n 50 --verbose --format json --output results.json
   
   # Batch processing
-  python be1_query.py --geo GSE243665 --metadata be1_metadata.json --gene EGFR,KRAS --output results.csv --batch-size 1000 --no-cache
+  python be1_query.py --geo GSE243665 --metadata scrna-schema/sco-benchmark-experiment-1.json --gene EGFR,KRAS --output results.csv --batch-size 1000 --no-cache
   
   # Multiple genes in multiple cells
-  python be1_query.py --geo GSE243665 --metadata be1_metadata.json --genes-in-cells EGFR,KRAS --cells AAACCCA,AAACCCG --format tsv
+  python be1_query.py --geo GSE243665 --metadata scrna-schema/sco-benchmark-experiment-1.json --genes-in-cells EGFR,KRAS --cells AAACCCA,AAACCCG --format tsv
   
 Utility commands:
-  python be1_query.py --geo GSE243665 --metadata be1_metadata.json --list-files
-  python be1_query.py --geo GSE243665 --metadata be1_metadata.json --check-data A549
-  python be1_query.py --geo GSE243665 --metadata be1_metadata.json --repair-files HTB178
-  python be1_query.py --geo GSE243665 --metadata be1_metadata.json --verify-all
-  python be1_query.py --geo GSE243665 --metadata be1_metadata.json --force-download A549 --timeout 120
+  python be1_query.py --geo GSE243665 --metadata scrna-schema/sco-benchmark-experiment-1.json --list-files
+  python be1_query.py --geo GSE243665 --metadata scrna-schema/sco-benchmark-experiment-1.json --check-data A549
+  python be1_query.py --geo GSE243665 --metadata scrna-schema/sco-benchmark-experiment-1.json --repair-files HTB178
+  python be1_query.py --geo GSE243665 --metadata scrna-schema/sco-benchmark-experiment-1.json --verify-all
+  python be1_query.py --geo GSE243665 --metadata scrna-schema/sco-benchmark-experiment-1.json --force-download A549 --timeout 120
         """
     )
     
@@ -1416,7 +1416,7 @@ Utility commands:
     parser.add_argument('--geo', default='GSE243665', 
                        help='GEO accession ID (e.g., GSE243665)')
     
-    parser.add_argument('--metadata', default='be1_metadata.json', 
+    parser.add_argument('--metadata', default='scrna-schema/sco-benchmark-experiment-1.json', 
                        type=existing_file,
                        help='JSON metadata file path')
     

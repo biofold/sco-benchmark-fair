@@ -504,7 +504,7 @@
 
                 <div class="key-metrics">
                     <div class="metric-card">
-                        <div class="metric-value">29,528</div>
+                        <div class="metric-value">29,606</div>
                         <div class="metric-label">Total Cells Sequenced</div>
                     </div>
                     <div class="metric-card">
@@ -535,8 +535,8 @@
                                 <li>NCI-H1395: BRAF G469A (2,673 cells)</li>
                                 <li>DV90: ERBB2 V842I (2,998 cells)</li>
                                 <li>HCC78: ROS1 fusion (2,748 cells)</li>
-                                <li>CCL.185-IG: ALK fusion (6,354 cells)</li>
-                                <li>PBMC: healthy donor control</li>
+                                <li>CCL-185-IG: ALK fusion (6,354 cells)</li>
+                                <li>PBMC: population multiplexed with the cell lines (478 cells; not described in the article)</li>
                             </ul>
                         </div>
                         <div class="card-footer">
@@ -551,7 +551,7 @@
                             <h3><i class="fa-solid fa-sitemap"></i> Single Cell Schema v0.4</h3>
                         </div>
                         <div class="card-body">
-                            <p>Complete FAIRification using Darwin Core extension for single-cell RNA-seq with 16 standardized metadata sheets covering all experimental aspects.</p>
+                            <p>Complete FAIRification using Darwin Core extension for single-cell RNA-seq with 15 standardized metadata sheets covering all experimental aspects.</p>
                             <ul style="margin-top: 10px; padding-left: 20px;">
                                 <li>Study, person, sample metadata</li>
                                 <li>Dissociation, cell suspension protocols</li>
@@ -628,12 +628,12 @@
                     <div class="workflow-step">
                         <div class="step-number">1</div>
                         <h4>Data Collection</h4>
-                        <p>7 lung cancer cell lines + PBMC, 29,528 cells sequenced on 10X Genomics</p>
+                        <p>7 lung cancer cell lines + PBMC, 29,606 cells (29,128 in the cell lines, 478 PBMC) sequenced on 10X Genomics</p>
                     </div>
                     <div class="workflow-step">
                         <div class="step-number">2</div>
                         <h4>Schema Mapping</h4>
-                        <p>Single Cell Schema v0.4 with 16 metadata sheets</p>
+                        <p>Single Cell Schema v0.4 with 15 metadata sheets</p>
                     </div>
                     <div class="workflow-step">
                         <div class="step-number">3</div>
@@ -660,27 +660,29 @@
 
                 <div class="table-wrapper">
                     <table>
-                        <thead>
-                            <tr>
-                                <th>Cell Line</th>
-                                <th>Driver Mutation</th>
-                                <th>Cells</th>
-                                <th>Mean Reads/Cell</th>
-                                <th>Median Genes</th>
-                                <th>Sequencing Saturation</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>PC9</td><td>EGFR Del19</td><td>4,492</td><td>28,984</td><td>2,868</td><td>47.8%</td></tr>
-                            <tr><td>A549</td><td>KRAS G12S</td><td>6,898</td><td>29,864</td><td>3,307</td><td>60.1%</td></tr>
-                            <tr><td>CCL-185-IG</td><td>EML4-ALK fusion</td><td>6,354</td><td>29,859</td><td>2,810</td><td>60.6%</td></tr>
-                            <tr><td>NCI-H1395</td><td>BRAF G469A</td><td>2,673</td><td>27,972</td><td>2,822</td><td>48.0%</td></tr>
-                            <tr><td>DV90</td><td>ERBB2 V842I</td><td>2,998</td><td>26,756</td><td>2,387</td><td>41.4%</td></tr>
-                            <tr><td>HCC78</td><td>ROS1 fusion</td><td>2,748</td><td>24,700</td><td>2,570</td><td>38.7%</td></tr>
-                            <tr><td>NCI-H596</td><td>MET Del14</td><td>2,965</td><td>28,666</td><td>3,113</td><td>56.7%</td></tr>
-                            <tr><td>PBMC</td><td>Healthy control</td><td>~500</td><td>-</td><td>-</td><td>-</td></tr>
-                        </tbody>
-                    </table>
+                    <thead>
+                        <tr>
+                            <th>Cell Line</th>
+                            <th>Driver Alteration</th>
+                            <th>Cells</th>
+                            <th>Median Reads/Cell</th>
+                            <th>Median Genes/Cell</th>
+                            <th>Total Genes</th>
+                            <th>Median UMI/Cell</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>A549</td><td>KRAS p.G12S</td><td>6,898</td><td>21,728</td><td>2,315</td><td>27,584</td><td>5,961</td></tr>
+                        <tr><td>CCL-185-IG</td><td>EML4-ALK fusion</td><td>6,354</td><td>21,493</td><td>2,294</td><td>26,855</td><td>5,935</td></tr>
+                        <tr><td>NCI-H1395 (CRL5868)</td><td>BRAF p.G469A</td><td>2,673</td><td>17,240</td><td>1,607</td><td>25,705</td><td>4,532</td></tr>
+                        <tr><td>DV90</td><td>ERBB2 p.V842I</td><td>2,998</td><td>21,241</td><td>2,160</td><td>25,786</td><td>5,628</td></tr>
+                        <tr><td>HCC78</td><td>SLC34A2-ROS1 fusion</td><td>2,748</td><td>28,423</td><td>2,665</td><td>25,425</td><td>7,808</td></tr>
+                        <tr><td>NCI-H596 (HTB178)</td><td>MET &Delta;14</td><td>2,965</td><td>19,652</td><td>2,113</td><td>25,281</td><td>5,300</td></tr>
+                        <tr><td>PC9</td><td>EGFR &Delta;19</td><td>4,492</td><td>27,026</td><td>2,746</td><td>26,881</td><td>7,437</td></tr>
+                        <tr><td>PBMC</td><td>none (GEO only)</td><td>478</td><td colspan="4">not reported in the article</td></tr>
+                    </tbody>
+                </table>
+                <p style="font-size:0.9em;">Cell Ranger statistics of Table 1 of Arigoni et al. (2024). Seven cell lines: 29,128 cells; with PBMC: 29,606 cells.</p>
                 </div>
                 <p class="small-note" style="margin-top: 10px;">Total sequenced: 2.46 billion reads, ≥71.26% bases ≥Q30 on NovaSeq X Plus</p>
             </section>
@@ -692,7 +694,7 @@
                 <div class="feature-highlights">
                     <div class="model-card nn">
                         <h4><i class="fa-solid fa-code-merge"></i> Single Cell Schema v0.4</h4>
-                        <p>Complete Darwin Core extension implementation with 16 standardized metadata sheets covering all experimental aspects from dissociation to expression data.</p>
+                        <p>Complete Darwin Core extension implementation with 15 standardized metadata sheets covering all experimental aspects from dissociation to expression data.</p>
                     </div>
                     <div class="model-card rf">
                         <h4><i class="fa-solid fa-dna"></i> Controlled Heterogeneity</h4>
@@ -729,7 +731,7 @@
                         <h4><i class="fas fa-filter"></i> QC Filtering</h4>
                         <p><strong>Tool:</strong> rCASC mitoRiboUmi plot</p>
                         <p><strong>NCI-H1395:</strong> Reduced from 2,673 to 1,939 cells after QC</p>
-                        <p><strong>Thresholds:</strong> mito &lt;20%, genes &gt;200, UMI &gt;500</p>
+                        <p><strong>Parameters:</strong> mitoRiboUmi plot with umiXgene = 3 (as in the article)</p>
                     </div>
                 </div>
             </section>
@@ -835,6 +837,12 @@ http://aisc.hpc4ai.unito.it:3838/
                         </div>
 
                 <div style="background-color: #f8f9fa; padding: 10px; border-radius: 8px; margin-top: 10px;">
+                    <h4><i class="fa fa-file-lines"></i> Project Report </h4>
+                    <p style="margin: 0 0 0.2rem 0;">Capriotti, E., Martelli, P. L., Savojardo, C. (2026). <em>FAIRification of the ELIXIR Single Cell Omics Benchmark</em>. Zenodo.
+                    <a href="https://doi.org/10.5281/zenodo.24150233" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.24150233</a></p>
+                </div>
+
+                <div style="background-color: #f8f9fa; padding: 10px; border-radius: 8px; margin-top: 10px;">
                 <h4><i class="fa fa-copyright"></i> License </h4>
                         <p style="margin: 0;">
                             This work is licensed under a 
@@ -859,8 +867,7 @@ http://aisc.hpc4ai.unito.it:3838/
                     <img src="https://img.shields.io/badge/FAIR_Score-80.0%2F100-brightgreen" alt="FAIR Score: 77.5/100"></a>
                     <a href="https://creativecommons.org/licenses/by-nc/4.0/">
                     <img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg" alt="License: CC BY-NC 4.0"></a>
-                    <a href="https://doi.org/10.5281/zenodo.XXXXXXX">
-                    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg" alt="DOI"></a>
+                    <img src="https://img.shields.io/badge/DOI-assigned%20at%20first%20release-lightgrey" alt="DOI: assigned at first release">
                     <a href="https://www.python.org/">
                     <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python 3.9+"></a>
                     <a href="https://singlecellschemas.org/">

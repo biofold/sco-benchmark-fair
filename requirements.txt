@@ -13,7 +13,3 @@ h5py>=3.7.0
 python-dateutil>=2.8.2
 pytz>=2022.7
 tqdm>=4.65.0
-
-# File compression
-gzip
-shutil

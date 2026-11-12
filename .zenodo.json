@@ -1,0 +1,77 @@
+{
+  "title": "ELIXIR - Single Cell Omics Benchmark - FAIR Metadata",
+  "upload_type": "dataset",
+  "description": "<p>FAIR metadata, query tool and web portal for the benchmark experiment 1 (BE1) of the ELIXIR Single Cell Omics community: a 10x Genomics single-cell RNA-seq experiment with seven lung cancer cell lines carrying different driver alterations (EGFR, KRAS, MET, BRAF, ERBB2, ROS1, ALK) and a PBMC population (GEO series GSE243665; 29,128 cells from the cell lines and 478 PBMC).</p><p>The experiment is described with the Single Cell Schema version 0.4 (<code>scrna-schema/</code>) and linked to the public records of GEO, SRA, BioProject and figshare. The count data are not part of this repository; they are available from GEO and figshare.</p><p>The experiment was published by Arigoni et al. (2024, Scientific Data 11:159, doi:10.1038/s41597-024-03002-y). Please cite the original publication as well as this package.</p>",
+  "creators": [
+    {
+      "name": "Capriotti, Emidio",
+      "affiliation": "University of Bologna",
+      "orcid": "0000-0002-2323-0963"
+    },
+    {
+      "name": "Martelli, Pier Luigi",
+      "affiliation": "University of Bologna",
+      "orcid": "0000-0002-0274-5669"
+    },
+    {
+      "name": "Savojardo, Castrense",
+      "affiliation": "University of Bologna",
+      "orcid": "0000-0002-7359-0633"
+    }
+  ],
+  "license": "cc-by-nc-4.0",
+  "access_right": "open",
+  "version": "1.0.0",
+  "language": "eng",
+  "keywords": [
+    "single-cell RNA sequencing",
+    "benchmark",
+    "cancer heterogeneity",
+    "FAIR data",
+    "Single Cell Schema",
+    "ELIXIR",
+    "10x Genomics",
+    "metadata"
+  ],
+  "communities": [
+    {
+      "identifier": "elixir"
+    },
+    {
+      "identifier": "biofold"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isDerivedFrom",
+      "identifier": "10.1038/s41597-024-03002-y",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "relation": "isDerivedFrom",
+      "identifier": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE243665",
+      "resource_type": "dataset",
+      "scheme": "url"
+    },
+    {
+      "relation": "isDocumentedBy",
+      "identifier": "10.5281/zenodo.22730058",
+      "scheme": "doi"
+    },
+    {
+      "relation": "isAlternateIdentifier",
+      "identifier": "https://biofold.github.io/sco-benchmark-fair",
+      "scheme": "url"
+    },
+    {
+      "relation": "isDocumentedBy",
+      "identifier": "10.5281/zenodo.24150233",
+      "scheme": "doi",
+      "resource_type": "publication-report"
+    }
+  ],
+  "references": [
+    "Arigoni M, Ratto ML, Riccardo F, Balmas E, Calogero L, Cordero F, Beccuti M, Calogero RA, Alessandri L. A single cell RNAseq benchmark experiment embedding \"controlled\" cancer heterogeneity. Sci Data 2024;11:159. doi:10.1038/s41597-024-03002-y"
+  ]
+}

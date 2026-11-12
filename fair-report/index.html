@@ -565,7 +565,7 @@
                 <tr>
                     <td><strong>Single Cell Schema v0.4</strong></td>
                     <td>Darwin Core extension for single-cell RNA-seq</td>
-                    <td>✅ Full (16 sheets)</td>
+                    <td>✅ Full (15 sheets)</td>
                 </tr>
                 <tr>
                     <td><strong>CITATION.cff</strong></td>
@@ -621,7 +621,7 @@ python scripts/be1_query.py \
         
         <div class="key-metrics">
             <div class="metric-card">
-                <div class="metric-value">29,528</div>
+                <div class="metric-value">29,606</div>
                 <div class="metric-label">Total Cells</div>
             </div>
             <div class="metric-card">
@@ -639,27 +639,29 @@ python scripts/be1_query.py \
         </div>
 
         <table>
-            <thead>
-                <tr>
-                    <th>Cell Line</th>
-                    <th>Driver Mutation</th>
-                    <th>Cells</th>
-                    <th>Mean Reads/Cell</th>
-                    <th>Median Genes</th>
-                    <th>Saturation</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>PC9</td><td>EGFR Del19</td><td>4,492</td><td>28,984</td><td>2,868</td><td>47.8%</td></tr>
-                <tr><td>A549</td><td>KRAS G12S</td><td>6,898</td><td>29,864</td><td>3,307</td><td>60.1%</td></tr>
-                <tr><td>CCL-185-IG</td><td>EML4-ALK fusion</td><td>6,354</td><td>29,859</td><td>2,810</td><td>60.6%</td></tr>
-                <tr><td>NCI-H1395</td><td>BRAF G469A</td><td>2,673</td><td>27,972</td><td>2,822</td><td>48.0%</td></tr>
-                <tr><td>DV90</td><td>ERBB2 V842I</td><td>2,998</td><td>26,756</td><td>2,387</td><td>41.4%</td></tr>
-                <tr><td>HCC78</td><td>ROS1 fusion</td><td>2,748</td><td>24,700</td><td>2,570</td><td>38.7%</td></tr>
-                <tr><td>NCI-H596</td><td>MET Del14</td><td>2,965</td><td>28,666</td><td>3,113</td><td>56.7%</td></tr>
-                <tr><td>PBMC</td><td>Healthy control</td><td>500</td><td>—</td><td>—</td><td>—</td></tr>
-            </tbody>
-        </table>
+                    <thead>
+                        <tr>
+                            <th>Cell Line</th>
+                            <th>Driver Alteration</th>
+                            <th>Cells</th>
+                            <th>Median Reads/Cell</th>
+                            <th>Median Genes/Cell</th>
+                            <th>Total Genes</th>
+                            <th>Median UMI/Cell</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>A549</td><td>KRAS p.G12S</td><td>6,898</td><td>21,728</td><td>2,315</td><td>27,584</td><td>5,961</td></tr>
+                        <tr><td>CCL-185-IG</td><td>EML4-ALK fusion</td><td>6,354</td><td>21,493</td><td>2,294</td><td>26,855</td><td>5,935</td></tr>
+                        <tr><td>NCI-H1395 (CRL5868)</td><td>BRAF p.G469A</td><td>2,673</td><td>17,240</td><td>1,607</td><td>25,705</td><td>4,532</td></tr>
+                        <tr><td>DV90</td><td>ERBB2 p.V842I</td><td>2,998</td><td>21,241</td><td>2,160</td><td>25,786</td><td>5,628</td></tr>
+                        <tr><td>HCC78</td><td>SLC34A2-ROS1 fusion</td><td>2,748</td><td>28,423</td><td>2,665</td><td>25,425</td><td>7,808</td></tr>
+                        <tr><td>NCI-H596 (HTB178)</td><td>MET &Delta;14</td><td>2,965</td><td>19,652</td><td>2,113</td><td>25,281</td><td>5,300</td></tr>
+                        <tr><td>PC9</td><td>EGFR &Delta;19</td><td>4,492</td><td>27,026</td><td>2,746</td><td>26,881</td><td>7,437</td></tr>
+                        <tr><td>PBMC</td><td>none (GEO only)</td><td>478</td><td colspan="4">not reported in the article</td></tr>
+                    </tbody>
+                </table>
+                <p style="font-size:0.9em;">Cell Ranger statistics of Table 1 of Arigoni et al. (2024). Seven cell lines: 29,128 cells; with PBMC: 29,606 cells.</p>
         
         <p><small>Total sequencing: 2.46 billion reads, ≥71.26% bases ≥Q30 on Illumina NovaSeq 6000</small></p>
     </section>
@@ -673,7 +675,7 @@ python scripts/be1_query.py \
             <div>
                 <h3><i class="fas fa-search"></i> Findable (80/100) ✅</h3>
                 <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #27ae60;"></i></span><strong>Strengths:</strong> Rich metadata with Single Cell Schema v0.4, persistent identifiers (GEO:GSE243665, DOI:10.1038/s41597-024-03002-8).</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #27ae60;"></i></span><strong>Strengths:</strong> Rich metadata with Single Cell Schema v0.4, persistent identifiers (GEO:GSE243665, DOI:10.1038/s41597-024-03002-y).</li>
                     <li><span class="fa-li"><i class="fas fa-exclamation-triangle" style="color: #f39c12;"></i></span><strong>Improvements Needed (Low Priority, +5 pts each):</strong>
                         <ul>
                             <li>Add relevant repository topics on GitHub (e.g., single-cell, rnaseq, benchmark).</li>
@@ -736,7 +738,7 @@ python scripts/be1_query.py \
         <pre>
 sco-benchmark-fair/
 ├── scrna-schema/
-│   ├── sco-benchmark-experiment-1.json      # Complete BE1 metadata (16 sheets)
+│   ├── sco-benchmark-experiment-1.json      # Complete BE1 metadata (15 sheets)
 │   └── schema.json                           # Single Cell Schema v0.4 definition
 ├── scripts/
 │   ├── be1_query.py                          # Python query tool
@@ -857,7 +859,7 @@ python scripts/be1_query.py \
             </div>
             <div class="feature-card">
                 <h4><i class="fas fa-sitemap"></i> Single Cell Schema v0.4</h4>
-                <p>Complete Darwin Core extension implementation with 16 standardized metadata sheets covering all experimental aspects.</p>
+                <p>Complete Darwin Core extension implementation with 15 standardized metadata sheets covering all experimental aspects.</p>
             </div>
             <div class="feature-card">
                 <h4><i class="fas fa-chart-line"></i> Interactive Tools</h4>
@@ -1063,24 +1065,25 @@ python scripts/be1_query.py \
    pages={159},
    year={2024},
    publisher={Nature Publishing Group},
-   doi={10.1038/s41597-024-03002-8},
+   doi={10.1038/s41597-024-03002-y},
    pmid={38307867},
    pmcid={PMC10837414}
 }
 
-@dataset{elixir2024fairmetadata,
-   title={BE1 Benchmark Dataset for Single-Cell RNA Sequencing: Controlled Cancer Heterogeneity FAIR Metadata},
-   author={{ELIXIR Single Cell Omics Community}},
-   year={2024},
-   version={1.0},
+@dataset{capriotti2026scofair,
+   title={ELIXIR - Single Cell Omics Benchmark - FAIR Metadata},
+   author={Capriotti, Emidio and Martelli, Pier Luigi and Savojardo, Castrense},
+   year={2026},
+   version={1.0.0},
    publisher={Zenodo},
-   doi={10.5281/zenodo.XXXXXXXX}  # Placeholder
+   url={https://github.com/biofold/sco-benchmark-fair},
+   note={DOI assigned by Zenodo at the first release}
 }
         </pre>
         
         <h3>Dataset Reference Publication</h3>
         <p><i class="fas fa-file-alt"></i> <strong>"A single cell RNAseq benchmark experiment embedding 'controlled' cancer heterogeneity"</strong><br>
-        📄 <a href="https://doi.org/10.1038/s41597-024-03002-8">https://doi.org/10.1038/s41597-024-03002-8</a></p>
+        📄 <a href="https://doi.org/10.1038/s41597-024-03002-y">https://doi.org/10.1038/s41597-024-03002-y</a></p>
         
         <h3>Contact</h3>
         <ul class="fa-ul">
@@ -1164,8 +1167,7 @@ python scripts/be1_query.py \
                 <img src="https://img.shields.io/badge/FAIR_Score-80.0%2F100-brightgreen" alt="FAIR Score: 77.5/100"></a>
                 <a href="https://creativecommons.org/licenses/by-nc/4.0/">
                 <img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg" alt="License: CC BY-NC 4.0"></a>
-                <a href="https://doi.org/10.5281/zenodo.XXXXXXX">
-                <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg" alt="DOI"></a>
+                <img src="https://img.shields.io/badge/DOI-assigned%20at%20first%20release-lightgrey" alt="DOI: assigned at first release">
                 <a href="https://www.python.org/">
                 <img src="https://img.shields.io/badge/Python-3.8%2B-blue.svg" alt="Python 3.9+"></a>
                 <a href="https://singlecellschemas.org/">

@@ -2,6 +2,8 @@
 
 **[→ View the FAIR Data Portal](https://biofold.github.io/sco-benchmark-fair)**
 
+**Project report:** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24150233.svg)](https://doi.org/10.5281/zenodo.24150233)
+
 
 ## **ELIXIR Single Cell Omics Benchmark Dataset 1 (GSE243665)** 
 

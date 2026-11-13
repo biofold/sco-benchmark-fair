@@ -2,7 +2,7 @@
 
 **[→ View the FAIR Data Portal](https://biofold.github.io/sco-benchmark-fair)**
 
-**Project report:** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24150233.svg)](https://doi.org/10.5281/zenodo.24150233)
+**Dataset:** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24196083.svg)](https://doi.org/10.5281/zenodo.24196083) &nbsp; **Project report:** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24150233.svg)](https://doi.org/10.5281/zenodo.24150233)
 
 
 ## **ELIXIR Single Cell Omics Benchmark Dataset 1 (GSE243665)** 
@@ -324,7 +324,7 @@ Schema version: dwc\_sc\_rnaseq v0.4
 Please cite both the original publication and this package.
 
 1. Arigoni M, Ratto ML, Riccardo F, et al. A single cell RNAseq benchmark experiment embedding "controlled" cancer heterogeneity. Sci Data 2024;11:159. doi:[10.1038/s41597-024-03002-y](https://doi.org/10.1038/s41597-024-03002-y)
-2. Capriotti E, Martelli PL, Savojardo C. *ELIXIR - Single Cell Omics Benchmark - FAIR Metadata*. Version 1.0.0. Zenodo. The DOI is assigned at the first release; see `CITATION.cff`.
+2. Capriotti E, Martelli PL, Savojardo C. *ELIXIR - Single Cell Omics Benchmark - FAIR Metadata*. Version 1.0.0. Zenodo. doi:[10.5281/zenodo.24196083](https://doi.org/10.5281/zenodo.24196083) (concept DOI, all versions).
 3. Project report: Capriotti E, Martelli PL, Savojardo C. *FAIRification of the ELIXIR Single Cell Omics Benchmark*. Zenodo. doi:[10.5281/zenodo.24150233](https://doi.org/10.5281/zenodo.24150233) (concept DOI, all versions).
 
 *This project is part of the ELIXIR Single Cell Omics Community and Tools Platform efforts to promote FAIR data practices.*

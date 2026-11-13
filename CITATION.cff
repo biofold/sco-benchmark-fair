@@ -14,6 +14,7 @@ authors:
     given-names: "Castrense"
     orcid: "https://orcid.org/0000-0002-7359-0633"
 version: "1.0.0"
+doi: "10.5281/zenodo.24196083"
 license: CC-BY-NC-4.0
 repository-code: "https://github.com/biofold/sco-benchmark-fair"
 url: "https://biofold.github.io/sco-benchmark-fair"

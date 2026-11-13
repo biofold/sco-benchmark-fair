@@ -257,7 +257,7 @@ No alerts generated for any cell line during processing. Complete metrics availa
 
 ### **6.5 Machine-readable FAIR report**
 
-The automated FAIR assessment of this repository is available as a machine-readable JSON file, [`fair-report/fair-report.json`](fair-report/fair-report.json), validated by the JSON Schema [`fair-report/fair-report.schema.json`](fair-report/fair-report.schema.json). It records the assessed repository, commit, release and DOI, the total score and the four FAIR principle scores with the criteria that are not met, the suggested improvements, and the limitations of the checklist. The file is produced by `scripts/test_fair_gitrepo.py` followed by `scripts/export_fair_report_json.py`; it can be regenerated at any release (see the usage in the header of the exporter script). Current values: total 81.25/100 (Findable 85, Accessible 80, Interoperable 75, Reusable 85) for release v1.0.0.
+The automated FAIR assessment of this repository is available as a machine-readable JSON file, [`fair-report/fair-report.json`](fair-report/fair-report.json), validated by the JSON Schema [`fair-report/fair-report.schema.json`](fair-report/fair-report.schema.json). It records the assessed repository, commit, release and DOI, the total score and the four FAIR principle scores with the criteria that are not met, the suggested improvements, and the limitations of the checklist. The file is produced by `scripts/test_fair_gitrepo.py` followed by `scripts/export_fair_report_json.py`; it can be regenerated at any release (see the usage in the header of the exporter script). Current values: total 81.25/100 (Findable 85, Accessible 80, Interoperable 75, Reusable 85); the file records the assessed commit and release.
 
 ---
 
@@ -328,7 +328,7 @@ Schema version: dwc\_sc\_rnaseq v0.4
 Please cite both the original publication and this package.
 
 1. Arigoni M, Ratto ML, Riccardo F, et al. A single cell RNAseq benchmark experiment embedding "controlled" cancer heterogeneity. Sci Data 2024;11:159. doi:[10.1038/s41597-024-03002-y](https://doi.org/10.1038/s41597-024-03002-y)
-2. Capriotti E, Martelli PL, Savojardo C. *ELIXIR - Single Cell Omics Benchmark - FAIR Metadata*. Version 1.0.0. Zenodo. doi:[10.5281/zenodo.24196083](https://doi.org/10.5281/zenodo.24196083) (concept DOI, all versions).
+2. Capriotti E, Martelli PL, Savojardo C. *ELIXIR - Single Cell Omics Benchmark - FAIR Metadata*. Version 1.1.0. Zenodo. doi:[10.5281/zenodo.24196083](https://doi.org/10.5281/zenodo.24196083) (concept DOI, all versions).
 3. Project report: Capriotti E, Martelli PL, Savojardo C. *FAIRification of the ELIXIR Single Cell Omics Benchmark*. Zenodo. doi:[10.5281/zenodo.24150233](https://doi.org/10.5281/zenodo.24150233) (concept DOI, all versions).
 
 *This project is part of the ELIXIR Single Cell Omics Community and Tools Platform efforts to promote FAIR data practices.*

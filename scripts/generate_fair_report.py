@@ -1728,7 +1728,7 @@ class FAIRVisualizer:
 
                 <div class="footer-content" style="margin-top:25px;">
                     <a href="https://github.com/biofold/sco-benchmark-fair" target="_blank">
-                    <img src="https://img.shields.io/badge/FAIR_Score-80.0%2F100-brightgreen" alt="FAIR Score: 80.0/100"></a>
+                    <img src="https://img.shields.io/badge/FAIR_Score-81.25%2F100-brightgreen" alt="FAIR Score: 81.25/100"></a>
                     <a href="https://creativecommons.org/licenses/by-nc/4.0/">
                     <img src="https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg" alt="License: CC BY-NC 4.0"></a>
                     <a href="https://doi.org/10.5281/zenodo.24196083" title="Dataset on Zenodo (concept DOI)"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.24196083.svg" alt="Dataset DOI"></a>

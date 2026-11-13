@@ -255,6 +255,10 @@ No alerts generated for any cell line during processing. Complete metrics availa
 * R1.2: Detailed provenance including culture conditions, dissociation methods  
 * R1.3: Community standards compliance ensures domain-relevant reuse
 
+### **6.5 Machine-readable FAIR report**
+
+The automated FAIR assessment of this repository is available as a machine-readable JSON file, [`fair-report/fair-report.json`](fair-report/fair-report.json), validated by the JSON Schema [`fair-report/fair-report.schema.json`](fair-report/fair-report.schema.json). It records the assessed repository, commit, release and DOI, the total score and the four FAIR principle scores with the criteria that are not met, the suggested improvements, and the limitations of the checklist. The file is produced by `scripts/test_fair_gitrepo.py` followed by `scripts/export_fair_report_json.py`; it can be regenerated at any release (see the usage in the header of the exporter script). Current values: total 81.25/100 (Findable 85, Accessible 80, Interoperable 75, Reusable 85) for release v1.0.0.
+
 ---
 
 ## **7\. Usage Notes and Derived Resources**

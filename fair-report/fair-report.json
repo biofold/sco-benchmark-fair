@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "report_type": "FAIR repository assessment",
+  "generated_at": "2026-11-13T14:21:56Z",
+  "assessed_at": "2026-11-13T15:19:13.155710",
+  "repository": {
+    "url": "https://github.com/biofold/sco-benchmark-fair",
+    "commit": "3a78826c99ec3abc9ad6988310c1e3e5f6a581ae",
+    "release_tag": "v1.0.0",
+    "doi": "10.5281/zenodo.24196083",
+    "license": "CC-BY-NC-4.0"
+  },
+  "tool": {
+    "name": "test_fair_gitrepo.py",
+    "description": "Rule-based FAIR checklist run on a clone of the repository; each principle is scored 0-100 from weighted criteria and the total is the mean of the four principle scores.",
+    "path": "scripts/test_fair_gitrepo.py"
+  },
+  "scores": {
+    "total": 81.25,
+    "scale_max": 100,
+    "principles": {
+      "findable": {
+        "score": 85,
+        "max_score": 100,
+        "percentage": 85.0,
+        "missing_criteria": [
+          "Repository topics",
+          "Documentation wiki",
+          "License in metadata"
+        ]
+      },
+      "accessible": {
+        "score": 80,
+        "max_score": 100,
+        "percentage": 80.0,
+        "missing_criteria": [
+          "Access rights in metadata"
+        ]
+      },
+      "interoperable": {
+        "score": 75,
+        "max_score": 100,
+        "percentage": 75.0,
+        "missing_criteria": [
+          "Controlled vocabularies",
+          "Format information"
+        ]
+      },
+      "reusable": {
+        "score": 85,
+        "max_score": 100,
+        "percentage": 85.0,
+        "missing_criteria": [
+          "Contact information",
+          "Issue templates"
+        ]
+      }
+    }
+  },
+  "metadata_summary": {
+    "metadata_files_found": 2,
+    "has_license": false,
+    "has_doi": false,
+    "has_contact": false,
+    "has_provenance": true,
+    "has_access_rights": false,
+    "has_format_info": false,
+    "has_vocabularies": false,
+    "standards_used": [
+      "dcat",
+      "schema.org"
+    ],
+    "license_types": [],
+    "formats_mentioned": []
+  },
+  "improvements": [
+    {
+      "principle": "Findable",
+      "missing_criterion": "Repository topics",
+      "action": "Add relevant topics to repository settings on GitHub",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "principle": "Findable",
+      "missing_criterion": "Documentation wiki",
+      "action": "Enable wiki and add basic documentation on GitHub",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "principle": "Findable",
+      "missing_criterion": "License in metadata",
+      "action": "Include license information in metadata files",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "principle": "Accessible",
+      "missing_criterion": "Access rights in metadata",
+      "action": "Specify access rights (open, restricted, closed) in metadata",
+      "priority": "Low",
+      "potential_points": 20
+    },
+    {
+      "principle": "Interoperable",
+      "missing_criterion": "Controlled vocabularies",
+      "action": "Use controlled vocabularies/ontologies for metadata fields",
+      "priority": "Low",
+      "potential_points": 15
+    },
+    {
+      "principle": "Interoperable",
+      "missing_criterion": "Format information",
+      "action": "Include format information (MIME types, extensions) in metadata",
+      "priority": "Low",
+      "potential_points": 10
+    },
+    {
+      "principle": "Reusable",
+      "missing_criterion": "Contact information",
+      "action": "Include contact information (email, ORCID) in metadata",
+      "priority": "Medium",
+      "potential_points": 10
+    },
+    {
+      "principle": "Reusable",
+      "missing_criterion": "Issue templates",
+      "action": "Add .github/ISSUE_TEMPLATE/ for structured bug reports and feature requests",
+      "priority": "Low",
+      "potential_points": 5
+    }
+  ],
+  "limitations": [
+    "The score is a checklist of repository-level FAIR indicators, not a certification of FAIR compliance.",
+    "Some criteria (e.g. repository topics, wiki, issue templates) are inferred from files in the clone and cannot see GitHub settings.",
+    "The assessed commit precedes the commit that adds this file."
+  ]
+}

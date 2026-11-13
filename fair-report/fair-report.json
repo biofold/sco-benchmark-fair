@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
   "report_type": "FAIR repository assessment",
-  "generated_at": "2026-11-13T14:21:56Z",
-  "assessed_at": "2026-11-13T15:19:13.155710",
+  "generated_at": "2026-11-13T14:54:08Z",
+  "assessed_at": "2026-11-13T15:54:08.478053",
   "repository": {
     "url": "https://github.com/biofold/sco-benchmark-fair",
-    "commit": "3a78826c99ec3abc9ad6988310c1e3e5f6a581ae",
-    "release_tag": "v1.0.0",
+    "commit": "a552d65d3b958bcc197e1a45ba687ce0438f59d3",
+    "release_tag": "v1.1.0",
     "doi": "10.5281/zenodo.24196083",
     "license": "CC-BY-NC-4.0"
   },
@@ -58,7 +58,7 @@
     }
   },
   "metadata_summary": {
-    "metadata_files_found": 2,
+    "metadata_files_found": 3,
     "has_license": false,
     "has_doi": false,
     "has_contact": false,

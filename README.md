@@ -259,6 +259,15 @@ No alerts generated for any cell line during processing. Complete metrics availa
 
 The automated FAIR assessment of this repository is available as a machine-readable JSON file, [`fair-report/fair-report.json`](fair-report/fair-report.json), validated by the JSON Schema [`fair-report/fair-report.schema.json`](fair-report/fair-report.schema.json). It records the assessed repository, commit, release and DOI, the total score and the four FAIR principle scores with the criteria that are not met, the suggested improvements, and the limitations of the checklist. The file is produced by `scripts/test_fair_gitrepo.py` followed by `scripts/export_fair_report_json.py`; it can be regenerated at any release (see the usage in the header of the exporter script). Current values: total 81.25/100 (Findable 85, Accessible 80, Interoperable 75, Reusable 85); the file records the assessed commit and release.
 
+### **6.6 Automation (GitHub Actions)**
+
+Two workflows in `.github/workflows/` automate the checks:
+
+* **Validate metadata** (`validate.yml`) runs on every push or pull request that changes the metadata. It validates `CITATION.cff` (with `cffconvert`), `.zenodo.json`, `fair-report/fair-report.json` against its JSON Schema and the Single Cell Schema record (`scrna-schema/`).
+* **Regenerate FAIR report** (`regenerate-fair-report.yml`) is started on demand from the *Actions* tab (*Run workflow*, entering the release tag; the tag must match the version in `CITATION.cff`). It re-assesses the repository against the comparison repositories listed in `fair-report/comparison_repos.txt`, regenerates `fair-report.json`, the FAIR dashboards and the score numbers shown in the README and pages, validates the result and opens a pull request. Nothing is committed to the default branch: after review, merge the pull request and publish a new tagged release, which Zenodo archives automatically.
+
+The benchmark data are a fixed community benchmark and are not refreshed on a schedule; they change only through deliberate curation followed by a new release.
+
 ---
 
 ## **7\. Usage Notes and Derived Resources**

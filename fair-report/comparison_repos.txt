@@ -1,0 +1,3 @@
+https://github.com/biofold/sco-benchmark-fair
+https://github.com/elixir-europe/sco-community
+https://github.com/kendomaniac/B1

@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
   "report_type": "FAIR repository assessment",
-  "generated_at": "2026-11-13T16:30:15Z",
-  "assessed_at": "2026-11-13T17:30:15.579011",
+  "generated_at": "2026-11-13T17:28:48Z",
+  "assessed_at": "2026-11-13T17:28:48.561757",
   "repository": {
     "url": "https://github.com/biofold/sco-benchmark-fair",
-    "commit": "0ee8634b10f927046c200735f4cf9ebea4e711c6",
+    "commit": "cf666e500314646582b6927466a117498c0ae200",
     "release_tag": "v1.2.0",
     "doi": "10.5281/zenodo.24196083",
     "license": "CC-BY-NC-4.0"
@@ -16,15 +16,16 @@
     "path": "scripts/test_fair_gitrepo.py"
   },
   "scores": {
-    "total": 81.25,
+    "total": 80.0,
     "scale_max": 100,
     "principles": {
       "findable": {
-        "score": 85,
+        "score": 80,
         "max_score": 100,
-        "percentage": 85.0,
+        "percentage": 80.0,
         "missing_criteria": [
           "Repository topics",
+          "GitHub releases",
           "Documentation wiki",
           "License in metadata"
         ]
@@ -67,8 +68,8 @@
     "has_format_info": false,
     "has_vocabularies": false,
     "standards_used": [
-      "dcat",
-      "schema.org"
+      "schema.org",
+      "dcat"
     ],
     "license_types": [],
     "formats_mentioned": []
@@ -78,6 +79,13 @@
       "principle": "Findable",
       "missing_criterion": "Repository topics",
       "action": "Add relevant topics to repository settings on GitHub",
+      "priority": "Low",
+      "potential_points": 5
+    },
+    {
+      "principle": "Findable",
+      "missing_criterion": "GitHub releases",
+      "action": "Create a release with version tag for stable versions",
       "priority": "Low",
       "potential_points": 5
     },

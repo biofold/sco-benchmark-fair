@@ -11,7 +11,7 @@
     {
       "Study ID": "GSE243665",
       "Title": "BE1: cancer heterogeneity",
-      "Description": "Seven lung cancer lines (PC9, A549, H596, H1395, DV90, HCC78, CCL185-IG) with driver mutations (EGFR, KRAS, MET, BRAF, ERBB2, ROS1, ALK) + PBMC control. 29,128 cells from the cell lines and 478 PBMC (29,606 cells in total) sequenced on 10X Genomics. Public: 2023-12-02.",
+      "Description": "Seven lung cancer lines (PC9, A549, H596, H1395, DV90, HCC78, CCL185-IG) with driver mutations (EGFR, KRAS, MET, BRAF, ERBB2, ROS1, ALK) + peripheral blood mononuclear cells. 29,128 and 478 cells, respectively (29,606 in total), 10X Genomics. Public: 2023-12-02.",
       "Bibliographic Citation": "Arigoni M, Ratto ML, Riccardo F, Balmas E et al. A single cell RNAseq benchmark experiment embedding 'controlled' cancer heterogeneity. Sci Data 2024 Feb 2;11(1):159. PMID: 38307867; doi: 10.1038/s41597-024-03002-y",
       "Created": "2023-12-02",
       "Workflow (optional)": "10X Genomics Chromium Next GEM Single Cell 3' Kit v3.1 with Cell Multiplexing (CellPlex)",
@@ -85,7 +85,7 @@
       "Sample ID": "BE1_PBMC",
       "Scientific Name or Organism (optional)": "Homo sapiens",
       "Taxon ID": "9606",
-      "Biosample Accession": "PBMC (CMO 308 of the GEO series GSE243665); not described in the article"
+      "Biosample Accession": "peripheral blood mononuclear cells (CMO 308 of the GEO series GSE243665); not described in the article"
     }
   ],
   "geo_samples": [
@@ -135,8 +135,8 @@
       "Study ID": "GSE243665",
       "Dissociation Protocol ID": "DISSOC_10X_V3.1_CELLPLEX",
       "Protocol Name": "10X Genomics Chromium Next GEM Single Cell 3' v3.1 with CellPlex Multiplexing",
-      "Dissociation Description": "Cell lines were cultured as per manufacturer recommendations. PC9, A549, NCI-H596, NCI-H1395, DV90, HCC78, CCL-185-IG, and PBMCs were processed. Cells were washed, incubated with Cell Multiplexing Oligos, and assessed for viability (>80%) before loading on Chromium Next GEM chip G.",
-      "Enrichment Markers (optional)": "None for cell lines; PBMCs processed without enrichment",
+      "Dissociation Description": "Cell lines were cultured as per manufacturer recommendations. PC9, A549, NCI-H596, NCI-H1395, DV90, HCC78, CCL-185-IG, and peripheral blood mononuclear cells were processed. Cells were washed, incubated with Cell Multiplexing Oligos, and assessed for viability (>80%) before loading on Chromium Next GEM chip G.",
+      "Enrichment Markers (optional)": "None for cell lines; peripheral blood mononuclear cells processed without enrichment",
       "Isolation Kit (optional)": "10X Genomics Chromium Next GEM Single Cell 3' Kit v3.1",
       "Literature Source Reference (optional)": "10X Genomics documentation; Arigoni et al. 2024",
       "Dissociation Protocol Method (optional)": "Cell multiplexing with lipid-tagged oligonucleotides",
@@ -245,7 +245,7 @@
       "Dual or Single Index": "Dual",
       "I5 Sequence": "Configuration in multi_gex.csv",
       "i7 Sequence": "Configuration in multi_gex.csv",
-      "Cell Phenotype (optional)": "Lung cancer cell lines with driver mutations plus PBMCs",
+      "Cell Phenotype (optional)": "Lung cancer cell lines with driver mutations plus peripheral blood mononuclear cells",
       "Design description (optional)": "10X Genomics 3' CellPlex protocol",
       "Library selection": "cDNA",
       "Library source": "TRANSCRIPTOMIC",

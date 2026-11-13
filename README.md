@@ -31,8 +31,8 @@ Key Characteristics:
   * DV90 (ERBB2 p.V842I, increased kinase activity)  
   * HCC78 (SLC34A2-ROS1 Fusion)  
   * CCL-185-IG (EML4-ALK Fusion in A549 isogenic background)  
-* PBMC population (CMO 308) included in the GEO series; it is not described in the article  
-* Total cells: 29,128 (seven cell lines) \+ 478 (PBMC) = 29,606  
+* Peripheral blood mononuclear cell population (CMO 308) included in the GEO series; it is not described in the article  
+* Total cells: 29,128 (seven cell lines) \+ 478 (peripheral blood mononuclear cells) = 29,606  
 * Platform: 10X Genomics (NovaSeq X Plus 10B flow-cell according to the article; the GEO platform record GPL24676 is Illumina NovaSeq 6000\)
 
 ### **1.2 Original Data Locations**
@@ -113,7 +113,7 @@ The 15 sheets of the Single Cell Schema were populated:
 | :---- | :---- |
 | study | Title, description, citation, created date, technology, licence |
 | person | Corresponding author of the data submission, with affiliation, funder and grant |
-| sample | 8 populations (7 cell lines \+ PBMC) with taxon IDs, PMID references, source information |
+| sample | 8 populations (7 cell lines \+ peripheral blood mononuclear cells) with taxon IDs, PMID references, source information |
 | dissociation | Protocol ID, dissociation method, viability criteria, kit information |
 | cell\_suspension | Per-population cell counts, suspension details |
 | lib\_prep | 10X Genomics v3.1 kit details, amplification method, library construction parameters |
@@ -168,7 +168,7 @@ The schema maintains referential integrity through:
 
 ### **4.2 Per-Population Statistics**
 
-Cell Ranger statistics of the article (Table 1 of Arigoni et al., 2024); PBMC are only available in GEO.
+Cell Ranger statistics of the article (Table 1 of Arigoni et al., 2024); peripheral blood mononuclear cells are only available in GEO.
 
 | Cell Line | Cells | Median reads per cell | Median genes per cell | Total genes detected | Median UMI counts per cell |
 | :---- | :---- | :---- | :---- | :---- | :---- |
@@ -179,9 +179,9 @@ Cell Ranger statistics of the article (Table 1 of Arigoni et al., 2024); PBMC ar
 | HCC78 | 2,748 | 28,423 | 2,665 | 25,425 | 7,808 |
 | NCI-H596 (HTB178) | 2,965 | 19,652 | 2,113 | 25,281 | 5,300 |
 | PC9 | 4,492 | 27,026 | 2,746 | 26,881 | 7,437 |
-| PBMC | 478 | not in the article | | | |
+| Peripheral blood mononuclear cells | 478 | not in the article | | | |
 
-Total: 29,128 cells in the seven cell lines; 29,606 including PBMC.
+Total: 29,128 cells in the seven cell lines; 29,606 including peripheral blood mononuclear cells.
 
 ### **4.3 File Inventory**
 
@@ -298,7 +298,7 @@ The `multi_gex.csv` file (available in GEO) contains complete sample multiplexin
 
 1. NCI-H1395 quality: Higher proportion of stressed cells (after QC reduces from 2673 to 1939 cells)  
 2. Sequencing instrument: the article reports a NovaSeq X Plus 10B flow-cell, while the GEO platform record is Illumina NovaSeq 6000  
-3. PBMC population: present in GEO (CMO 308, 478 cells) but not described in the article  
+3. Peripheral blood mononuclear cell population: present in GEO (CMO 308, 478 cells) but not described in the article  
 4. Per-population Cell Ranger statistics: use Table 1 of the article (section 4.2)
 
 ---

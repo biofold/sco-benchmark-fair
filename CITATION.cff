@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this FAIR metadata package, please cite both the original publication and this package."
 title: "ELIXIR - Single Cell Omics Benchmark - FAIR Metadata"
 type: dataset
-abstract: "FAIR metadata, query tool and web portal for the benchmark experiment 1 (BE1) of the ELIXIR Single Cell Omics community: a 10x Genomics single-cell RNA-seq experiment with seven lung cancer cell lines carrying different driver alterations and a PBMC population (GEO series GSE243665; 29,128 cells from the cell lines and 478 PBMC). The experiment is described with the Single Cell Schema version 0.4 and linked to the public records of GEO, SRA, BioProject and figshare. The count data are not part of this repository."
+abstract: "FAIR metadata, query tool and web portal for the benchmark experiment 1 (BE1) of the ELIXIR Single Cell Omics community: a 10x Genomics single-cell RNA-seq experiment with seven lung cancer cell lines carrying different driver alterations and a peripheral blood mononuclear cell population (GEO series GSE243665; 29,128 cells from the cell lines and 478 peripheral blood mononuclear cells). The experiment is described with the Single Cell Schema version 0.4 and linked to the public records of GEO, SRA, BioProject and figshare. The count data are not part of this repository."
 authors:
   - family-names: "Capriotti"
     given-names: "Emidio"
